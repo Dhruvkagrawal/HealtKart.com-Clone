@@ -23,9 +23,8 @@ router.post("/", async(req,res)=>{
        
         const flashsale_protiens = await Flashsale_protiens.find().lean().exec()
         return res.render("index",{
-            flashsale_protiens,
+            flashsale_protiens : flashsale_protiens ,
         })
-
     }catch(e){
         return res.status(500).send({message :e.message , status:"failed"})
     }
@@ -42,7 +41,7 @@ router.post("/", async(req,res)=>{
  
  router.patch("/:id", async(req,res)=>{
      try{
-         const flashsale_protiens = Flashsale_protiens.findByIdAndUpdate(req.params.id , req.body,{new:true}).lean().exec()
+         const flashsale_protiens =await Flashsale_protiens.findByIdAndUpdate(req.params.id , req.body,{new:true}).lean().exec()
          return res.status(201).send(flashsale_protiens)
      }catch(e){
          return res.status(500).send({message :e.message , status:"failed"})
