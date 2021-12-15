@@ -498,14 +498,14 @@ a{
               
    <% flashsale_protiens.forEach((product)=> {%>
 
-    <div class="inner2_1_f" id="inner2_1_f" style="display: block;">
+    <div class="inner2_1_f" id="inner2_1_f"  >
          <div class="inner2_1_1_f">
-            <img src=  <%=product.flash_sale_img %> class="img2">
+            <img class="img2" src=  <%=product.flash_sale_img %> />
             <div><%= product.units %></div>
             <div class="timer" id="timers"></div>
          </div>
          <div>
-            <img src=<%= product.imgProduct %> class="main_img">
+            <img  class="main_img" src=<%= product.imgProduct %> />
          </div>
          <div>
             <div>
@@ -558,46 +558,43 @@ a{
         </div>
         <div class="inner2_f" id="inner2_trendingNow">
              <!-- trail-->
-
-             <% trendingNow_protiens.forEach((product)=> {%>
-
-                <div class="inner2_f" id="inner2_trendingNow">
-                     <div class="inner2_1_f" id="inner2_1_f" style="display: block;">
-                     <div>
-                        <img src=<%=product.imgProduct %> class="main_img">
-                     </div>
-                     <div>
-                       <div>
-                          <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%=product.price_off %></span>
-                       </div>
-                       <div><%=product.name %></div>
-                       <small class="inner2_1_3_3_f"> 
-                          <%=product.rating %>
-                           <i class="fas fa-star" aria-hidden="true"></i>
-                           <i class="fas fa-star" aria-hidden="true"></i>
-                           <i class="fas fa-star" aria-hidden="true"></i>
-                           <i class="fas fa-star" aria-hidden="true"></i>
-                           <i class="fas fa-star-half-alt" aria-hidden="true"></i>
-                       </small>
-                      <div class="inner2_1_3_4_f">
-                           <div class="inner2_1_3_4_1_f"> <%=product.price %></div>
-                               <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
-                                     <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                                     <div>ADD</div>
-                               </button>
+             <% trendingNow_protiens.forEach((product)=> {  %>
+          
+                <div class="inner2_1_f" id="inner2_1_f" >
+                        <div>
+                           <img  class="main_img" src= <%=product.imgProduct %>  />
+                        </div>
+                        <div>
+                           <div>
+                             <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%= product.price_off %> </span>
                            </div>
-                      <div class="inner2_1_3_5_f">
-                              <div class="inner2_1_3_5_1_f">Premium Price:</div>
-                              <div class="inner2_1_3_5_2_f"> <%=product.premium_price %></div>
-                      </div>
+                           <div><%=  product.name %></div>
+                               <small class="inner2_1_3_3_f"> <%= product.rating %>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                               </small>
+                               <div class="inner2_1_3_4_f">
+                                   <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
+                                   <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
+                                         <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                         <div>ADD</div>
+                                   </button>
+                              </div>
+                              <div class="inner2_1_3_5_f">
+                                   <div class="inner2_1_3_5_1_f">Premium Price:</div>
+                                   <div class="inner2_1_3_5_2_f"><%= product.premium_price %></div>
+                             </div>
+                          </div>
                    </div>
-                </div>
-                
-                   <% }) %>
-                
-
+              
+             <% }) %>
+         
+        
             <!-- trail-->
-            </div>
+        </div>
         <button class="LEFTbtn" id="trendingLeftBtn_trendingNow"></button>
         <button class="RIGHTbtn" id="trendingRightBtn_trendingNow"> </button>
     </div>
@@ -627,6 +624,17 @@ a{
         <div class="inner1_pop"> Popular in Sports Nutrition</div>
         <div class="inner2_pop">
             <div class="inner2_1_pop" id="inner2_1_popular_for_sport">
+                <!-- trail-->
+                        
+               <% popular_in_weights.forEach((product)=> {%>
+
+                    <div class="hide">
+                         <img class="img1_pop" src=<%=product.img %> />
+                         <div class="p_pop"><%=product.name %></div>
+                     </div>
+
+             <% }) %>
+                <!--- trail -->
                 <button class="popularLeft" id="trendingLeftBtn_popular_for_sport"></button>
                 <button class="popularRight" id="trendingRightBtn_popular_for_sport"> </button>
             </div>
@@ -643,6 +651,16 @@ a{
         <div class="inner1_pop"> Popular in Weight Loss</div>
         <div class="inner2_pop">
             <div class="inner2_1_pop" id="inner2_1_popular_in_weight">
+                <!--- trail-->
+                <% popular_in_weights.forEach((product)=> {%>
+
+                    <div class="hide" >
+                         <img class="img1_pop" src=<%=product.img %> />
+                         <div class="p_pop"><%=product.name %></div>
+                     </div>
+
+             <% }) %>
+                 <!--- trail-->
                 <button class="popularLeft" id="trendingLeftBtn_popular_in_weight"></button>
                 <button class="popularRight" id="trendingRightBtn_popular_in_weight"> </button>
             </div>
@@ -674,7 +692,20 @@ a{
     <div class="popular" id="box_popular_in_health">
         <div class="inner1_pop"> Popular in Health Foods & Drinks</div>
         <div class="inner2_pop">
+           
             <div class="inner2_1_pop" id="inner2_1_popular_in_health">
+
+                 <!-- trail --> 
+            <% popular_in_weights.forEach((product)=> {%>
+
+                <div class="hide" >
+                     <img class="img1_pop" src=<%=product.img %> />
+                     <div class="p_pop"><%=product.name %></div>
+                 </div>
+
+         <% }) %>
+
+            <!---trail--->
                 <button class="popularLeft" id="trendingLeftBtn_popular_in_health"></button>
                 <button class="popularRight" id="trendingRightBtn_popular_in_health"> </button>
             </div>
@@ -708,7 +739,19 @@ a{
         <div class="inner1_pop">Popular in Fitness</div>
         <div class="inner2_pop">
             <div class="inner2_1_pop" id="inner2_1_popular_in_fitness">
+               <!-- trail --> 
+            <% popular_in_weights.forEach((product)=> {%>
 
+                <div class="hide">
+                     <img class="img1_pop" src=<%=product.img %> />
+                     <div class="p_pop"><%=product.name %></div>
+                 </div>
+
+         <% }) %>
+
+            <!---trail--->
+            <button class="popularLeft" id="trendingLeftBtn_popular_in_fitness"></button>
+            <button class="popularRight" id="trendingRightBtn_popular_in_fitness"> </button>
             </div>
         </div>
     </div>
@@ -988,6 +1031,261 @@ trendingLeftBtn.onclick = function () {
 
 
 //////////////////// flash sale //////////////////////
+
+
+/////////// popular in sport ////////////////
+
+
+//  slide script for multiple products
+
+
+let trendingLeftBtn_popular_for_sport = document.getElementById('trendingLeftBtn_popular_for_sport');
+
+
+let trendingRightBtn_popular_for_sport = document.getElementById('trendingRightBtn_popular_for_sport')
+
+let leftTrending_popular_for_sport = 0;
+let rightTrending_popular_for_sport = 4;
+
+let divsTrending_popular_for_sport = document.querySelectorAll('#inner2_1_popular_for_sport>div')
+console.log(divsTrending_popular_for_sport);
+function popular_for_sport() {
+    for (let i = leftTrending_popular_for_sport; i < rightTrending_popular_for_sport; i++) {
+        divsTrending_popular_for_sport[i].style.display = 'block'
+
+    }
+
+
+
+}
+popular_for_sport()
+
+
+trendingRightBtn_popular_for_sport.onclick = function () {
+    divsTrending_popular_for_sport[leftTrending_popular_for_sport].style.display = 'none'
+    leftTrending_popular_for_sport++
+    rightTrending_popular_for_sport++
+    popular_for_sport()
+
+    if (leftTrending_popular_for_sport > 0) {
+        trendingLeftBtn_popular_for_sport.style.display = 'block'
+    }
+    if (rightTrending_popular_for_sport === divsTrending_popular_for_sport.length) {
+        trendingRightBtn_popular_for_sport.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_popular_for_sport.onclick = function () {
+    leftTrending_popular_for_sport--
+    rightTrending_popular_for_sport--
+    divsTrending_popular_for_sport[rightTrending_popular_for_sport].style.display = 'none'
+
+    popular_for_sport()
+    if (leftTrending_popular_for_sport == 0) {
+        trendingLeftBtn_popular_for_sport.style.display = 'none'
+    }
+
+    if (rightTrending_popular_for_sport < divsTrending_popular_for_sport.length) {
+        trendingRightBtn_popular_for_sport.style.display = 'block'
+    }
+}
+
+
+/////////// popular in sport ////////////////
+
+
+///////////// popular in weight ////////////
+//  slide script for multiple products
+
+
+
+let trendingLeftBtn_popular_in_weight = document.getElementById('trendingLeftBtn_popular_in_weight');
+
+
+let trendingRightBtn_popular_in_weight = document.getElementById('trendingRightBtn_popular_in_weight')
+
+let leftTrending_popular_in_weight = 0;
+let rightTrending_popular_in_weight = 4;
+
+let divsTrending_popular_in_weight = document.querySelectorAll('#inner2_1_popular_in_weight>div')
+console.log(divsTrending_popular_in_weight);
+function popular_in_weight() {
+    for (let i = leftTrending_popular_in_weight; i < rightTrending_popular_in_weight; i++) {
+        divsTrending_popular_in_weight[i].style.display = 'block'
+
+    }
+
+
+
+}
+popular_in_weight()
+
+
+trendingRightBtn_popular_in_weight.onclick = function () {
+    divsTrending_popular_in_weight[leftTrending_popular_in_weight].style.display = 'none'
+    leftTrending_popular_in_weight++
+    rightTrending_popular_in_weight++
+    popular_in_weight()
+
+    if (leftTrending_popular_in_weight > 0) {
+        trendingLeftBtn_popular_in_weight.style.display = 'block'
+    }
+    if (rightTrending_popular_in_weight === divsTrending_popular_in_weight.length) {
+        trendingRightBtn_popular_in_weight.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_popular_in_weight.onclick = function () {
+    leftTrending_popular_in_weight--
+    rightTrending_popular_in_weight--
+    divsTrending_popular_in_weight[rightTrending_popular_in_weight].style.display = 'none'
+
+    popular_in_weight()
+    if (leftTrending_popular_in_weight == 0) {
+        trendingLeftBtn_popular_in_weight.style.display = 'none'
+    }
+
+    if (rightTrending_popular_in_weight < divsTrending_popular_in_weight.length) {
+        trendingRightBtn_popular_in_weight.style.display = 'block'
+    }
+}
+
+
+//////////// popular in weight /////////////
+
+
+///////////// popular in health ///////////
+
+
+//  slide script for multiple products
+
+
+
+let trendingLeftBtn_popular_in_health = document.getElementById('trendingLeftBtn_popular_in_health');
+
+
+let trendingRightBtn_popular_in_health = document.getElementById('trendingRightBtn_popular_in_health')
+
+let leftTrending_popular_in_health = 0;
+let rightTrending_popular_in_health = 4;
+
+let divsTrending_popular_in_health = document.querySelectorAll('#inner2_1_popular_in_health>div')
+console.log(divsTrending_popular_in_health);
+function Health_Foods_Drink() {
+    for (let i = leftTrending_popular_in_health; i < rightTrending_popular_in_health; i++) {
+        divsTrending_popular_in_health[i].style.display = 'block'
+
+    }
+
+
+
+}
+Health_Foods_Drink()
+
+
+trendingRightBtn_popular_in_health.onclick = function () {
+    divsTrending_popular_in_health[leftTrending_popular_in_health].style.display = 'none'
+    leftTrending_popular_in_health++
+    rightTrending_popular_in_health++
+    Health_Foods_Drink()
+
+    if (leftTrending_popular_in_health > 0) {
+        trendingLeftBtn_popular_in_health.style.display = 'block'
+    }
+    if (rightTrending_popular_in_health === divsTrending_popular_in_health.length) {
+        trendingRightBtn_popular_in_health.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_popular_in_health.onclick = function () {
+    leftTrending_popular_in_health--
+    rightTrending_popular_in_health--
+    divsTrending_popular_in_health[rightTrending_popular_in_health].style.display = 'none'
+
+    Health_Foods_Drink()
+    if (leftTrending_popular_in_health == 0) {
+        trendingLeftBtn_popular_in_health.style.display = 'none'
+    }
+
+    if (rightTrending_popular_in_health < divsTrending_popular_in_health.length) {
+        trendingRightBtn_popular_in_health.style.display = 'block'
+    }
+}
+
+
+
+///////////// popular in health ///////////
+
+
+/////////////// popular in fitness //////
+
+//  slide script for multiple products
+
+
+
+let trendingLeftBtn_popular_in_fitness = document.getElementById('trendingLeftBtn_popular_in_fitness');
+
+
+let trendingRightBtn_popular_in_fitness = document.getElementById('trendingRightBtn_popular_in_fitness')
+
+let leftTrending_popular_in_fitness = 0;
+let rightTrending_popular_in_fitness = 4;
+
+let divsTrending_popular_in_fitness = document.querySelectorAll('#inner2_1_popular_in_fitness>div')
+console.log(divsTrending_popular_in_fitness);
+function fitness_Foods_Drink() {
+    for (let i = leftTrending_popular_in_fitness; i < rightTrending_popular_in_fitness; i++) {
+        divsTrending_popular_in_fitness[i].style.display = 'block'
+
+    }
+
+
+
+}
+fitness_Foods_Drink()
+
+
+trendingRightBtn_popular_in_fitness.onclick = function () {
+    divsTrending_popular_in_fitness[leftTrending_popular_in_fitness].style.display = 'none'
+    leftTrending_popular_in_fitness++
+    rightTrending_popular_in_fitness++
+    fitness_Foods_Drink()
+
+    if (leftTrending_popular_in_fitness > 0) {
+        trendingLeftBtn_popular_in_fitness.style.display = 'block'
+    }
+    if (rightTrending_popular_in_fitness === divsTrending_popular_in_fitness.length) {
+        trendingRightBtn_popular_in_fitness.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_popular_in_fitness.onclick = function () {
+    leftTrending_popular_in_fitness--
+    rightTrending_popular_in_fitness--
+    divsTrending_popular_in_fitness[rightTrending_popular_in_fitness].style.display = 'none'
+
+    fitness_Foods_Drink()
+    if (leftTrending_popular_in_fitness == 0) {
+        trendingLeftBtn_popular_in_fitness.style.display = 'none'
+    }
+
+    if (rightTrending_popular_in_fitness < divsTrending_popular_in_fitness.length) {
+        trendingRightBtn_popular_in_fitness.style.display = 'block'
+    }
+}
+
+
+
+
+/////////// popular in fitness //////////
 </script>
 
 
