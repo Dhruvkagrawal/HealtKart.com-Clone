@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Dhruvkagrawal/HealtKart.com-Clone#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-validator": "^6.14.0",
     "mongoose": "^6.1.1"
   },
   "devDependencies": {}
