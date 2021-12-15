@@ -42,7 +42,7 @@ router.post(
   body("mobile_number")
   .isLength({ min: 10, max: 10 })
   .withMessage(
-    "mobile number should be 6 digits"
+    "mobile number should be 10 digits"
   ),
   body("address1")
   .isLength({ min: 3, max: 20 })
