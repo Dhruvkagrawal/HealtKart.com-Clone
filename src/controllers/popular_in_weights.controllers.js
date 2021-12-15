@@ -1,6 +1,6 @@
 
 const express = require("express")
-const TrendingNow_protiens = require("../models/trendingNow_protiens.model")
+const Popular_in_weights = require("../models/popular_in_weights.model")
 const router = express.Router()
 
 
@@ -9,8 +9,8 @@ router.post("/", async(req,res)=>{
     
     try{
        // console.log(req.body)
-        const trendingNow_protiens =await  TrendingNow_protiens.create(req.body)
-        return res.status(200).send(trendingNow_protiens)    
+        const popular_in_weights =await  Popular_in_weights.create(req.body)
+        return res.status(200).send(popular_in_weights)    
  
  
     }catch(e){
@@ -21,8 +21,8 @@ router.post("/", async(req,res)=>{
  router.get("/", async (req,res)=>{
     try{
        
-        const trendingNow_protiens = await TrendingNow_protiens.find().lean().exec()
-        return res.status(201).send({trendingNow_protiens})
+        const popular_in_weights = await Popular_in_weights.find().lean().exec()
+        return res.status(201).send({popular_in_weights})
     }catch(e){
         return res.status(500).send({message :e.message , status:"failed"})
     }
@@ -30,8 +30,8 @@ router.post("/", async(req,res)=>{
  /*
  router.get("/:id", async (req,res)=>{
      try{
-         const trendingNow_protiens = await TrendingNow_protiens.findById(req.params.id).lean().exec()
-         return res.status(201).send({trendingNow_protiens})
+         const popular_in_weights = await Popular_in_weights.findById(req.params.id).lean().exec()
+         return res.status(201).send({popular_in_weights})
      }catch(e){
          return res.status(500).send({message :e.message , status:"failed"})
      }
@@ -39,8 +39,8 @@ router.post("/", async(req,res)=>{
  
  router.patch("/:id", async(req,res)=>{
      try{
-         const trendingNow_protiens =await TrendingNow_protiens.findByIdAndUpdate(req.params.id , req.body,{new:true}).lean().exec()
-         return res.status(201).send(trendingNow_protiens)
+         const popular_in_weights =await Popular_in_weights.findByIdAndUpdate(req.params.id , req.body,{new:true}).lean().exec()
+         return res.status(201).send(popular_in_weights)
      }catch(e){
          return res.status(500).send({message :e.message , status:"failed"})
      }
@@ -48,8 +48,8 @@ router.post("/", async(req,res)=>{
  
  router.delete("/:id", async(req,res)=>{
  try{
-     const trendingNow_protiens = await TrendingNow_protiens.findByIdAndDelete(req.params.id).lean().exec()
-     return res.status(201).send({trendingNow_protiens})
+     const popular_in_weights = await Popular_in_weights.findByIdAndDelete(req.params.id).lean().exec()
+     return res.status(201).send({popular_in_weights})
  }catch(e){
          return res.status(500).send({message :e.message , status:"failed"})
      }
