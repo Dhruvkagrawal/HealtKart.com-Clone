@@ -7,11 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div></div>
-    <%flashsale.forEach(product) %> 
-          <p> <%= product.name   %></p> 
-
-
-    <% }) %>
+    <div>
+        <% flashsale.forEach(product => { %> 
+            <p> <%= product.name   %></p> 
+  
+  
+      <% }) %>
+    </div>
+   
 </body>
 </html>

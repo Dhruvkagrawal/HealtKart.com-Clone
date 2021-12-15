@@ -5,7 +5,11 @@ const trendingNow_protiensController = require("./controllers/trendingNow_protie
 const popular_in_weightsController = require("./controllers/popular_in_weights.controllers")
 
 const app = express();
+
+
 app.use(express.json())
+app.set("view engine", "ejs")
+
 
 app.use("/flashsale",flashsale_protiensController )
 app.use("/trending",trendingNow_protiensController )
