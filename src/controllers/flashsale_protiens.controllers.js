@@ -2,7 +2,7 @@
 const express = require("express")
 const Flashsale_protiens = require("../models/flashsale_protiens.model")
 const router = express.Router()
-
+const TrendingNow_protiens = require("../models/trendingNow_protiens.model")
 
 
 router.post("/", async(req,res)=>{
@@ -22,8 +22,10 @@ router.post("/", async(req,res)=>{
     try{
        
         const flashsale_protiens = await Flashsale_protiens.find().lean().exec()
+        const trendingNow_protiens = await TrendingNow_protiens.find().lean().exec()
         return res.render("index",{
             flashsale_protiens : flashsale_protiens ,
+            trendingNow_protiens : trendingNow_protiens ,
         })
     }catch(e){
         return res.status(500).send({message :e.message , status:"failed"})

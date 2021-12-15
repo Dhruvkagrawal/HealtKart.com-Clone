@@ -557,8 +557,47 @@ a{
             <button class="view_btn_f" onclick="productPage()">View All</button>
         </div>
         <div class="inner2_f" id="inner2_trendingNow">
+             <!-- trail-->
 
-        </div>
+             <% trendingNow_protiens.forEach((product)=> {%>
+
+                <div class="inner2_f" id="inner2_trendingNow">
+                     <div class="inner2_1_f" id="inner2_1_f" style="display: block;">
+                     <div>
+                        <img src=<%=product.imgProduct %> class="main_img">
+                     </div>
+                     <div>
+                       <div>
+                          <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%=product.price_off %></span>
+                       </div>
+                       <div><%=product.name %></div>
+                       <small class="inner2_1_3_3_f"> 
+                          <%=product.rating %>
+                           <i class="fas fa-star" aria-hidden="true"></i>
+                           <i class="fas fa-star" aria-hidden="true"></i>
+                           <i class="fas fa-star" aria-hidden="true"></i>
+                           <i class="fas fa-star" aria-hidden="true"></i>
+                           <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                       </small>
+                      <div class="inner2_1_3_4_f">
+                           <div class="inner2_1_3_4_1_f"> <%=product.price %></div>
+                               <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
+                                     <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                     <div>ADD</div>
+                               </button>
+                           </div>
+                      <div class="inner2_1_3_5_f">
+                              <div class="inner2_1_3_5_1_f">Premium Price:</div>
+                              <div class="inner2_1_3_5_2_f"> <%=product.premium_price %></div>
+                      </div>
+                   </div>
+                </div>
+                
+                   <% }) %>
+                
+
+            <!-- trail-->
+            </div>
         <button class="LEFTbtn" id="trendingLeftBtn_trendingNow"></button>
         <button class="RIGHTbtn" id="trendingRightBtn_trendingNow"> </button>
     </div>

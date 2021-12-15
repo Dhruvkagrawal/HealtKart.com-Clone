@@ -39,7 +39,7 @@ router.post("/", async(req,res)=>{
  
  router.patch("/:id", async(req,res)=>{
      try{
-         const trendingNow_protiens =await TrendingNow_protiens.findByIdAndUpdate(req.params.id , req.body,{new:true}).lean().exec()
+         const trendingNow_protiens = TrendingNow_protiens.findByIdAndUpdate(req.params.id , req.body,{new:true}).lean().exec()
          return res.status(201).send(trendingNow_protiens)
      }catch(e){
          return res.status(500).send({message :e.message , status:"failed"})
