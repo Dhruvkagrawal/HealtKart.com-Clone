@@ -53,16 +53,24 @@ router.get("/women", async (req,res)=>{
         const flashsale_protiens = await Flashsale_protiens.find().lean().exec()
         return res.render("women",{
             flashsale_protiens : flashsale_protiens ,
-            
         })
     }catch(e){
         return res.status(500).send({message :e.message , status:"failed"})
     }
 })
-
-
-
-
+router.get("/men", async (req,res)=>{
+    try{
+       
+        const flashsale_protiens = await Flashsale_protiens.find().lean().exec()
+        const trendingNow_protiens = await TrendingNow_protiens.find().lean().exec()
+        return res.render("men",{
+            flashsale_protiens : flashsale_protiens ,
+            trendingNow_protiens : trendingNow_protiens 
+        })
+    }catch(e){
+        return res.status(500).send({message :e.message , status:"failed"})
+    }
+})
  /*
  router.get("/:id", async (req,res)=>{
      try{

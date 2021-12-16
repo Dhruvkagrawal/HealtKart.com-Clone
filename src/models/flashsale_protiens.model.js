@@ -8,7 +8,7 @@ const flashsale_protiensSchema = new mongoose.Schema({
     name : {type: String , required : true },
     rating :{type: String , required: true},
     price :{type: Number , required: true},
-    premium_price :{type: String , required: true}
+    premium_price :{type: String , required: true},
 
 },{
    versionKey: false,
