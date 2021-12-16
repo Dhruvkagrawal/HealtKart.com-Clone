@@ -36,7 +36,7 @@ const login = async (req, res) => {
       });
 
    
-    const match = await user.checkPassword(req.body.password);
+    const match = await User.findOne({email:req.body.email,password:req.body.password});
 
     if (!match)
       return res.status(400).json({

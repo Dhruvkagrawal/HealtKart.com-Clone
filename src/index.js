@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.post("/register", register);
 app.post("/login", login);
-
+app.set('viewengine', 'ejs')
 app.use(passport.initialize());
 
 passport.serializeUser(function (user, done) {
