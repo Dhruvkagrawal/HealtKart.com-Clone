@@ -374,4 +374,29 @@ a{
     </div>
 </body>
 </html>
-<script></script>
+<script>
+productsWomen.forEach(product =>{
+        let container = document.createElement('div');
+        let image = document.createElement('div');
+        let proImg = document.createElement('img');
+        proImg.src = product.imgProduct;
+         image.setAttribute('class','imageOfPro');
+         image.appendChild(proImg);
+
+         let title = document.createElement('div');
+         let reviewStars = document.createElement('div');
+         let prise = document.createElement('div');
+         title.textContent = product.name;
+         title.setAttribute('class',"title")
+
+         reviewStars.textContent = "Rating: " +product.rating;
+         reviewStars.setAttribute('class', 'reviewStars')
+
+         prise.textContent = '₹'+ product.price;
+         prise.setAttribute('class','price')
+
+         container.append(image,title,reviewStars,prise)
+
+         prodDesc.appendChild(container)
+     })
+</script>
