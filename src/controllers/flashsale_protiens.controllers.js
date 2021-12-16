@@ -33,6 +33,25 @@ router.post("/", async(req,res)=>{
         return res.status(500).send({message :e.message , status:"failed"})
     }
 })
+
+router.get("/payment", async (req,res)=>{
+    try{
+       
+        const flashsale_protiens = await Flashsale_protiens.find().lean().exec()
+        return res.render("payment",{
+            flashsale_protiens : flashsale_protiens ,
+            
+        })
+    }catch(e){
+        return res.status(500).send({message :e.message , status:"failed"})
+    }
+})
+
+
+
+
+
+
  /*
  router.get("/:id", async (req,res)=>{
      try{
