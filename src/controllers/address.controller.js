@@ -94,4 +94,8 @@ router.post(
   }
 );
 
+router.get("/", async function(req,res)  {
+return res.render("address")
+})
+
 module.exports = router;

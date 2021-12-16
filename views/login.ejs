@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/signIn_Up.css" />
+    <style>
+    #login2>ul>li:nth-child(1)::after{
+    content: "";
+    background-color: #00aeae;
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    border-radius: 4px;
+    }
+    * {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: #212121;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+#loginpopup, #backimg, #box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#backimg, #box {
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+}
+
+#scale {
+    width: 100%;
+    height: 100%;
+}
+
+#box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    height: 550px;
+    background: #fff;
+    border-radius: 4px solid rgb(255, 255, 255);
+    overflow: hidden;
+    display: flex;
+}
+
+#left {
+    width: 312px;
+    height: 100%;
+    display: flex;
+}
+
+#leftimg {
+    background-image: url("https://static1.hkrtcdn.com/hknext/static/media/signupFlow/login-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: unset;
+    position: relative;
+    width: 100%;
+    padding: 25.2px 14px 35px 32px;
+}
+
+#leftimg>h4 {
+    font-family: Source Sans Pro, sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    color: #fff;
+    margin: 0 0 20px;
+}
+
+#desc {
+    display: flex;
+    position: relative;
+}
+
+#desc>img {
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    border-style: none;
+}
+
+#desc>div {
+    margin-left: 28px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: .16px;
+    line-height: 21px;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+#right {
+    overflow-y: hidden;
+    width: 388px;
+    border-radius: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: inline-block;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#login {
+    height: 100%;
+    position: relative;
+}
+
+#login>div:nth-child(1) {
+    left: 0;
+    padding-left: 32px;
+    padding-right: 31px;
+    padding-top: 25px;
+}
+
+#login2>img {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    top: 17px;
+    right: 16px;
+    z-index: 99;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+#login2>ul {
+    border-bottom: 3px solid #f4f4f4;
+    list-style: none;
+    margin: 0 0 30px;
+    padding: 0;
+    display: block;
+}
+
+#login2>ul>li {
+    display: inline-block;
+    width: inherit;
+    font-size: 16px;
+    color: #666670;
+    cursor: pointer;
+    padding: 10px 29px;
+    line-height: 21px;
+    position: relative;
+    letter-spacing: .32px;
+    font-weight: 500;
+}
+
+#errortext>p {
+    text-transform: none;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+    margin-top: 4px;
+    letter-spacing: .11px;
+    color: #da1e28;
+    margin-bottom: 5px;
+}
+
+#parent {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 0 0 24px;
+}
+
+#parent>div {
+    font-size: 14px;
+    line-height: 19px;
+    color: #393939;
+    margin-bottom: 10px;
+}
+
+#relative {
+    position: relative;
+}
+
+#relative>input {
+    z-index: 88;
+    width: 100%;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: .16px;
+    border: 1px solid #c6c6c6;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 12px;
+    color: #393939;
+    background: #fff;
+    -moz-transition: all .1s ease;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    overflow: visible;
+}
+
+#parentfield {
+    width: 100%;
+    display: -moz-box;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+#submit {
+    color: #fff;
+    padding: 0;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #00aeae;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    -webkit-appearance: none;
+    text-transform: uppercase;
+    letter-spacing: .32px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+#or {
+    margin: 24px auto 16px;
+    text-align: center;
+    position: relative;
+}
+
+#or>span {
+    margin: 24px auto 16px;
+    text-align: center;
+    position: relative;
+    font-weight: 400;
+    color: #161616;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0 14px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+#or>div {
+    position: absolute;
+    border-bottom: 1px solid #cdcfd2;
+    width: 100%;
+    height: 2px;
+    bottom: 9px;
+}
+
+#google>div {
+    border-radius: 4px;
+    cursor: pointer;
+    display: -moz-box;
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    -moz-box-align: center;
+    align-items: center;
+    padding: 12px 0;
+    border: 1px solid #e0e0e0;
+}
+
+#google>div>span {
+    font-size: 14px;
+    letter-spacing: .28px;
+    color: #525252;
+    margin-left: 8px;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+#bottom>p {
+    padding-top: 14px;
+    border-top: 1px solid #c6c6c6;
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+    line-height: 16px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    content: "";
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+#bottom>p>a {
+    color: #0043ce;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: transparent;
+}
+    </style>
+</head>
+<body>
+    <div id="loginpopup">
+        <div id="backimg"></div>
+        <img src="	https://static1.hkrtcdn.com/hknext/static/media/common/login/popUpDesktop.webp" alt="popup" id="scale" />
+        <div id="box">
+            <div id="left">
+                <div id="leftimg">
+                    <h4>Why Login?</h4>
+                    <div id="desc">
+                        <img src="https://static1.hkrtcdn.com/hknext/static/media/signupFlow/white-bg-tick.svg"/>
+                        <div>Manage your orders</div>
+                    </div>
+                    <div id="desc">
+                        <img src="https://static1.hkrtcdn.com/hknext/static/media/signupFlow/white-bg-tick.svg"/>
+                        <div>Get exclusive deals and offers</div>
+                    </div>
+                    <div id="desc">
+                        <img src="https://static1.hkrtcdn.com/hknext/static/media/signupFlow/white-bg-tick.svg"/>
+                        <div>Personalized Recommendations</div>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+                <div id="login">
+                    <div>
+                        <div id="login2">
+                            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/login/Closs.svg" id="cross"/>
+                            <ul>
+                                <li id="tab-1">Login</li>
+                                <li id="tab-2">Signup</li>
+                            </ul>
+                            <div id="loginsection">
+                                <p id="errortext"></p>
+                                <form onsubmit="login(event)" id="login-form">
+                                    <div id="parent">
+                                        <div>Mobile Number</div>
+                                        <div id="relative">
+                                            <input id="user" type="tel" tabindex="0" placeholder="Enter 10 digit no.">
+                                        </div>
+                                        <p id="errortext"></p>
+                                    </div>
+                                    <div id="parentfield" style="justify-content: center;">
+                                        <input type="submit" value="Login" id="submit"/>
+                                    </div>
+                                </form>
+                                <div id="or">
+                                    <span>or</span>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div id="google">
+                                        <div>
+                                        <img src="https://static1.hkrtcdn.com/hknext/static/media/common/Logo%20Google.svg" />
+                                        <span>Google</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div id="bottom">
+                                    <p>By logging in you agree to our<a href="https://www.healthkart.com/hk/TermsConditions.action" tabindex="0">Terms & Conditions</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script > 
+let a=document.getElementById("cross");
+        a.addEventListener("click",goto);
+        function goto(){
+            window.location.href="index.html"
+        }
+
+        var flag=false;
+        function Signup(e){
+            e.preventDefault();
+            let myform = document.getElementById("signup-form");
+            let email = myform.mobile.value;
+            let eror=document.getElementById("errortext");
+            console.log(email);
+            
+            if(localStorage.getItem("users")==null){
+                localStorage.setItem("users", JSON.stringify([]));
+            }
+            let user = {
+                email,
+            }
+            if(user.email==="" && (email.length<10)){
+               let wrong=document.createElement("p");
+                wrong.textContent="Please enter a valid Mobile Number";
+                eror.append(wrong);
+            }
+            else{
+                window.location.href='login.html';
+            }
+            /// get arr from local storage 
+            let arr =  JSON.parse(localStorage.getItem("users"));
+            arr.push(user);
+
+            localStorage.setItem("users", JSON.stringify(arr));
+        }
+
+
+        var all_users = JSON.parse(localStorage.getItem("users"));
+        function login(e){
+                e.preventDefault();
+                let myform = document.getElementById("login-form");
+                let email = myform.user.value;
+                for(var i=0;i<all_users.length;i++){
+                    if(all_users[i].email===email&&(email.length>9)){
+                        flag=true;
+                        break;                   
+                    }else{
+                        flag=false;
+                    }
+                }
+                if(flag===true){
+                    window.location.href = "index.html";
+                }else{
+                    alert("Please enter a valid Mobile Number");
+                }
+             }
+
+
+
+    let tab=document.getElementById("tab-1");
+    tab.addEventListener("click",openlogin);
+    function openlogin(){
+        window.location.href="login.html"
+    }
+    let tab1=document.getElementById("tab-2");
+    tab1.addEventListener("click",opensignup);
+    function opensignup(){
+        window.location.href="signup.html"
+    }
+</script>
