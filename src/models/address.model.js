@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const addressSchema = new mongoose.Schema({
     first_name:{type:String,required:true},
     last_name:{type:String,required:true},
@@ -15,5 +14,5 @@ const addressSchema = new mongoose.Schema({
     timestamps:true
 })
 
-module.exports = mongoose.model("user", addressSchema)
+module.exports = mongoose.model("address", addressSchema)
 

@@ -1,7 +1,7 @@
 const express = require("express");
 const { body, validationResult } = require("express-validator");
 
-const User = require("../models/address.model");
+const Address = require("../models/address.model");
 
 const router = express.Router();
 
@@ -30,7 +30,7 @@ router.post(
     if (!isEmail) {
       throw new Error("Please enter a proper email address");
     }
-    const userByEmail = await User.findOne({ email: value })
+    const userByEmail = await Address.findOne({ email: value })
       .lean()
       .exec();
     if (userByEmail) {
@@ -85,13 +85,30 @@ router.post(
 
 
     try {
-      const user = await User.create(req.body);
+      const user = await Address.create({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        mobile_number: req.body.mobile_number,
+        address1: req.body.address1,
+        address2: req.body.address2,
+        city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip,
 
-      return res.status(201).json({ user });
+      });
+
+      return res.render("address",{address})
+
+      
     } catch (e) {
       return res.status(500).json({ status: "failed", message: e.message });
     }
   }
 );
+
+router.get("/", async function(req,res)  {
+return res.render("address")
+})
 
 module.exports = router;
