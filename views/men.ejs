@@ -851,7 +851,7 @@ background: skyblue !important;
        <div class='widgit-content-wrap'>
            <div id="home-widgit-carousel">
             <% flashsale_protiens.forEach(function (product) {%>
-                <div style="cursor: pointer;"><div class="contTip"><img src=<%= product.flash_sale_img%>></div><div class="contMid"><div class="logImg"><img src="https://img10.hkrtcdn.com/react/static/media/common/variant/wishlist/hover-heart.svg"></div><div class="middle"><img src=<%= product.imgProduct%>></div></div><div><div id="marg" style="font-size: 14px; color: rgb(33, 33, 33);">MuscleBlaze Raw Whey Isolate,  2.2 lb  Unflavoured</div><div class="rating"><div class="innerRating">Rating: 4.7</div></div><div id="priceCont"><div class="price">₹1028</div><div class="addCart" style="background-color: rgb(225, 237, 244);"><img src="https://img2.hkrtcdn.com/react/static/media/common/new_cart.svg"><span>ADD</span></div></div><div class="hk-premium-price"><div>Premium Price: 1600</div></div></div></div>
+                <div style="cursor: pointer;"><div class="contTip"><img src=<%= product.flash_sale_img%>></div><div class="contMid"><div class="logImg"><img src="https://img10.hkrtcdn.com/react/static/media/common/variant/wishlist/hover-heart.svg"></div><div class="middle"><img src=<%= product.imgProduct%>></div></div><div><div id="marg" style="font-size: 14px; color: rgb(33, 33, 33);">MuscleBlaze Raw Whey Isolate,  2.2 lb  Unflavoured</div><div class="rating"><div class="innerRating">Rating: 4.7</div></div><div id="priceCont"><div class="price">₹1028</div><div class="addCart" style="background-color: rgb(225, 237, 244);"><img src="https://img2.hkrtcdn.com/react/static/media/common/new_cart.svg"><span onclick="addtoCart('<%=product._id%>')" id='<%=product._id%>'>ADD</span></div></div><div class="hk-premium-price"><div>Premium Price: 1600</div></div></div></div>
              <% }) %>
            </div>            
        </div>
@@ -889,8 +889,28 @@ background: skyblue !important;
 </body>
 </html>
 <script>
-    function addProductToKart(product){
-      console.log(product)
+    const xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://localhost:3000/flashsale/men/products');
+ let products, proTren;
+xhr.onload = async () => {
+    var arr = await xhr.response;
+    products = JSON.parse(arr).flashsale_protiens
+    console.log(products)
+    proTren = JSON.parse(arr).trendingNow_protiens
+}
+    function addtoCart(product){
+    
+       let span = document.getElementById(product)
+       span.textContent = null;
+        span.textContent = 'CART-->'
+        products.forEach(pro=>{
+            if(pro._id == product)
+            {
+                xhr.open("POST", "http://localhost:3000/cart/add");
+            xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+          xhr.send(JSON.stringify(pro));
+            }
+        })
     }
 
    var i =0;
@@ -1041,4 +1061,5 @@ const sign = document.getElementById('sI')
   }
   }
   makeNavbar();
+  xhr.send();
 </script>
