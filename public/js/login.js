@@ -64,5 +64,5 @@ let a=document.getElementById("cross");
     let tab1=document.getElementById("tab-2");
     tab1.addEventListener("click",opensignup);
     function opensignup(){
-        window.location.href="signup.ejs"
+        window.location.href="signup"
     }
