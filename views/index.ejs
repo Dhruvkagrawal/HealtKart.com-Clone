@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a894dfd8d0.js" crossorigin="anonymous"></script>
+    <title>HealthKart</title>
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="/css/navebar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<style>
+   * {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    cursor: pointer;
+    }
+    button{
+        cursor: pointer;
+    }
+/*
+#navbar {
+    background-color: rgb(134, 118, 118);
+    height: 173px;
+}
+*/
+
+/* sliding images css start  */
+
+#slide {
+    /* background-color: rgb(139, 88, 97); */
+    height: 363px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+#slide>div {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#slide>div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#left {
+    font-size: 100px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    border: 5px solid white;
+    left: 3%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* transform: rotate(45deg); */
+    background-color: rgba(0, 0, 0, 0);
+    border-right: none;
+    border-top: none;
+}
+
+#right {
+    font-size: 100px;
+    height: 30px;
+    position: absolute;
+    width: 30px;
+    top: 50%;
+    right: 1%;
+    border: 5px solid white;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: rgba(0, 0, 0, 0);
+    border-left: none;
+    border-bottom: none;
+}
+
+/* sliding image css ends here  */
+
+/* features css starts here  */
+
+#features {
+    display: flex;
+    height: 240px;
+    width: 77%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+#features>div {
+    border: 0.5px solid rgb(153, 149, 149);
+    justify-content: space-around;
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5px;
+}
+
+.box h3 {
+    margin: 15px 0;
+}
+
+.box img {
+    margin: 20px 0 0;
+}
+
+#category {
+    width: 77%;
+    margin: 40px auto;
+}
+
+#category div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 25px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#category h1 {
+    margin: 20px 0;
+}
+
+/* flash sale */
+
+* {
+    box-sizing: border-box;
+}
+
+/* #box_flash_sale {
+    margin: 50px auto;
+    width: 77%;
+    height: 508px;
+    box-shadow: 1px 1px 5px 1px gray;
+    position: relative;
+} */
+
+.cont {
+    margin: 50px auto;
+    width: 77%;
+    height: 508px;
+    box-shadow: 1px 1px 5px 1px gray;
+    position: relative;
+}
+
+.inner1_f {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red;*/
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0%;
+    padding: 1% 3%;
+    background-color: white;
+}
+
+.view_btn_f {
+    color: white;
+    background-color: #00AFAE;
+    border-radius: 5px;
+    border: none;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.inner2_f {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid  blue;*/
+    background-color: #F8F8F8;
+    padding: 1% 2%;
+    column-gap: 14px;
+}
+
+.inner2_1_f {
+    /* border: 1px solid black;*/
+    background-color: white;
+    width: 280px;
+    height: 430px;
+    border-radius: 5px;
+    padding: 1%;
+  /*  display: none;*/
+}
+
+.inner2_1_f:hover {
+    box-shadow: 3px 3px 5px 3px gray;
+}
+
+.inner2_1_1_f {
+    /* border: 1px solid black;*/
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+#inner2_1_3_1_fl {
+    border: 1px solid red;
+    color: red;
+    padding: 1%;
+    line-height: 40px;
+}
+
+.inner2_1_3_2_f {
+    padding-top: 8%;
+}
+
+.inner2_1_3_4_f {
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+}
+
+.inner2_1_3_4_1_f {
+    font-weight: 700;
+    padding-top: 4%;
+}
+
+#inner2_1_3_4_2_f {
+    padding: 4%;
+    background-color: #BBDEFB;
+    border: none;
+}
+
+#inner2_1_3_4_2_f:hover {
+    background-color: #00AFAE;
+    color: white;
+}
+
+.inner2_1_3_5_f {
+    /* border: 1px solid black;*/
+    background-color: #EAF8F8;
+    display: flex;
+    padding: 5%;
+    margin-top: 10px;
+}
+
+.inner2_1_3_5_2_f {
+    font-weight: 700;
+    padding-left: 3%;
+}
+
+.main_img {
+    /* border: 1px solid black;*/
+    margin-left: 15%;
+}
+
+/* trending css start here  */
+
+#trending {
+    border: 2px solid red;
+    display: flex;
+    height: 300px;
+    font-size: 3em;
+    justify-content: space-around;
+    position: relative;
+}
+
+#trending>div {
+    border: 2px solid red;
+    width: 22%;
+    height: 100%;
+    display: none;
+}
+
+.LEFTbtn {
+    font-size: 100px;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    border: 5px solid #00AFAE;
+    left: 1.5%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* transform: rotate(45deg); */
+    background-color: rgba(0, 0, 0, 0);
+    border-right: none;
+    border-top: none;
+    display: none;
+}
+
+.RIGHTbtn {
+    font-size: 100px;
+    height: 25px;
+    position: absolute;
+    width: 25px;
+    top: 50%;
+    right: -.6%;
+    border: 5px solid #00AFAE;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: rgba(0, 0, 0, 0);
+    border-left: none;
+    border-bottom: none;
+}
+
+/* popular in weights */
+
+* {
+    box-sizing: border-box;
+}
+
+.inner1_pop {
+    /* border: 1px solid red;*/
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0%;
+    padding: 1% 3%;
+    background-color: white;
+}
+
+.inner2_pop {
+    /*  border: 1px solid  blue;*/
+    background-color: #F8F8F8;
+    padding: 1% 2%;
+}
+
+.inner2_1_pop {
+    display: flex;
+    justify-content: space-between;
+    /*  border: 1px solid black;*/
+    background-color: white;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.p_pop {
+    font-weight: 700;
+    /* border: 1px solid black;*/
+}
+
+.B_pop {
+    border: 1px solid #BDBDBD;
+    background-color: #BDBDBD;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.hide {
+    display: none;
+}
+
+/* popular in sports */
+
+/* popular in health */
+
+.popular {
+    margin: 50px auto;
+    /*  border: 1px solid black;*/
+    height: 249px;
+    width: 77%;
+    box-shadow: 1px 1px 5px 1px gray;
+    position: relative;
+}
+
+.popularLeft {
+    font-size: 100px;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    border: 5px solid #00AFAE;
+    left: 1.5%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* transform: rotate(45deg); */
+    background-color: rgba(0, 0, 0, 0);
+    border-right: none;
+    border-top: none;
+    display: none;
+}
+
+.popularRight {
+    font-size: 100px;
+    height: 25px;
+    position: absolute;
+    width: 25px;
+    top: 50%;
+    right: -0.6%;
+    border: 5px solid #00AFAE;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: rgba(0, 0, 0, 0);
+    border-left: none;
+    border-bottom: none;
+}
+
+/*  TrueBasic part */
+
+#truebasic {
+    width: 100%;
+    height: 277px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6%;
+    background-color: #f8f8f8;
+}
+
+#truebasic>div {
+    width: 26%;
+    display: flex;
+    height: 170px;
+}
+
+#truebasic>div:nth-child(2) {
+    width: 1px;
+    height: 233px;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    border-right: 0.5px solid #c4bdbd;
+}
+
+#truebasic>div>div {
+    width: 60%;
+}
+
+#truebasic img {
+    width: 37%;
+    height: 77%;
+    object-fit: contain;
+}
+
+#truebasic h4 {
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+#truebasic p {
+    margin: 10px 0;
+}
+
+#truebasic button {
+    padding: 5px;
+    background-color: #1A4F69;
+    color: white;
+    border-radius: 7px;
+}
+
+.block_div {
+    border: 2px solid gray;
+}
+
+/* trueBasic part */
+
+
+/*  star and cart css /// do not remove  //// */
+.fa-star{
+    color: #008497;
+}
+.fa-star-half-alt{
+    color: #008497;
+}
+.add_to_cart_btn{
+    color: #008497;
+}
+/*  star and cart css */ 
+
+
+/*   navebar */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+#navCont {
+    display: flex;
+    margin: auto;
+    width: 1170px;
+    height: 87.5px;
+}
+
+#logo {
+    width: 197px;
+    height: 49px;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+#search {
+    width: 360px;
+    border: none;
+    margin-left: 10px;
+    background-color: #f7f7f7;
+}
+
+.glass {
+    margin-left: 10px;
+    width: 20px;
+}
+
+#searchCont {
+    display: flex;
+    border: 1px solid gray;
+    height: 37px;
+    margin-top: 24px;
+    border-radius: 3px;
+    margin-left: 2.5%;
+    background-color: #f7f7f7;
+}
+
+#headCart {
+    display: flex;
+    padding-left: 5px;
+    width: auto;
+    align-items: center;
+    font-size: 14px;
+}
+
+#headCart>div {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.ima {
+    margin: 5px;
+    margin-bottom: 5px;
+}
+
+#cart {
+    width: 28px;
+}
+
+#belowNav {
+    margin: auto;
+    display: flex;
+    width: 1170px;
+    height: 51.3px;
+}
+
+#catag {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    width: 798.3px;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+#catag>div {
+    cursor: pointer;
+}
+
+#catag>div:hover {
+    color: #007aff;
+}
+
+#cataglast {
+    margin-right: 60px;
+}
+
+#navCont>div>div:hover {
+    color: #007aff;
+}
+
+#store {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    width: 224px;
+    font-weight: 600;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-right: 32px;
+}
+
+#store>div {
+    padding: 5px;
+    background: #e3e3e3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#myDIV {
+    display: none;
+}
+
+#myDIV {
+    background: #fff;
+    border: 1px solid transparent;
+    font-size: 12px;
+    text-align: left;
+    width: 160px;
+    margin-top: 10px;
+}
+
+#myDIV p {
+    padding: 10px;
+    font-weight: lighter;
+}
+
+#myDIV>p:hover {
+    color: #007aff;
+}
+
+#myDIV h1 {
+    padding: 10px;
+    font-weight: lighter;
+}
+
+.ic img {
+    width: 18px;
+}
+
+#accounts {
+    position: relative;
+}
+
+#dropTable {
+    display: none;
+}
+
+#dropTable {
+    right: 0;
+    width: 323px;
+    color: black;
+    text-align: center;
+    background-color: #fff;
+}
+
+#dropTable #sI, #lO {
+    margin: auto;
+    width: 296px;
+    height: 50px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    line-height: 55px;
+    background: cadetblue;
+    border-radius: 4px;
+    color: white;
+}
+
+#dropTable #lO {
+    background: none;
+    color: black;
+    border: 1px solid black;
+}
+
+#insideDrop {
+    width: 296px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 13px;
+    grid-gap: 0;
+}
+
+#f1, #f2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+#f1>div:nth-child(1) {
+    color: #009393;
+}
+
+#f2>div:nth-child(1) {
+    color: #009393;
+}
+
+#f1>div:hover {
+    color: #007aff;
+}
+
+#f2>div:hover {
+    color: #007aff;
+}
+
+#catogBestSeller {
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0;
+}
+
+#catogBestSeller {
+    display: none;
+}
+
+#sellerCat1 {
+    background: #f6f6f7;
+}
+
+#sellerCat1>div {
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+#forSport, #forhealth {
+    background-color: lightcyan;
+    padding: 20px;
+    line-height: 30px;
+}
+
+#sNutri:hover {
+    background-color: white;
+}
+
+#hNutri:hover {
+    background-color: white;
+}
+
+#gend-DroDwn {
+    display: none;
+}
+
+#gend-DroDwn {
+    width: 265px;
+    height: 176px;
+    position: absolute;
+    background-color: #fff;
+}
+
+#gen_content {
+    width: 219px;
+    height: 145px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.gender_text {
+    color: #1d1d1d;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#cat_menWomen {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 20px;
+}
+
+#cat_menWomen>div {
+    width: 100px;
+    height: 107px;
+    border: 0.5px solid gray;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+}
+
+#div_cat_Men:hover {
+    border: 1px solid blue;
+    color: blueviolet;
+}
+
+#div_cat_Women:hover {
+    border: 1px solid blue;
+    color: blueviolet;
+}
+
+#hk {
+    background-color: #d8faf9 !important;
+}
+
+#hk:hover {
+    background-color: rgb(60, 187, 238) !important;
+}
+
+
+/* navebar */
+
+
+/* footer */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+}
+a{
+cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+#main {
+    width: 1170px;
+    margin: 50px auto;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 15% 12% 14% 14% 14% 29%;
+}
+
+#footer .col {
+    font-size: 14px;
+    color: #525151;
+}
+
+#footer .col .text {
+    font-weight: 100;
+    line-height: 1.7em;
+    margin-top: 1%
+}
+
+#footer .col h4 {
+    margin: 20px auto;
+}
+
+a {
+    text-decoration: none;
+    color: #525151;
+    font-size: 15px;
+    cursor: pointer;
+}
+.text a:hover {
+   font-weight: bold;
+}
+
+#footer .col .input {
+    width: 64%;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #ddd7d7;
+    outline: none;
+}
+
+.subcribe_btn {
+    width: 27%;
+    height: 36px;
+    margin-top: -1%;
+    background-color: #198b86;
+    color: white;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: 8px;
+    border: none;
+}
+
+.subcribe_btn:hover {
+    background-color: #1ba59e;
+}
+
+.upper {
+    margin-top: -2%
+}
+
+p {
+    margin-top: -3%;
+    line-height: 1.6em;
+}
+
+.fa {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 4px;
+    font-size: 14px !important;
+    line-height: 27px;
+    width: 33px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 10%;
+}
+
+#socialMedia div {
+    display: flex;
+  
+    justify-content: space-between;
+}
+
+.col>div {
+    font-size: 14px !important;
+    line-height: 27px;
+}
+
+
+/* footer */
+</style>
+
+
+<body>
+
+
+<!-- header -->
+<div id="header-Navbar"> <section>
+    <div id="navCont">
+        <div id="logo"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 179.3 43.7" enable-background="new 0 0 179.3 43.7" space="preserve">
+            <polygon fill="#00BFBF" points="10.7,13.3 10.7,20.4 3,20.4 3,13.3 0,13.3 0,30.4 3,30.4 3,22.8 10.7,22.8 10.7,30.4 13.6,30.4
+            13.6,13.3 "></polygon>
+            <polygon fill="#00BFBF" points="30.7,22.8 22.5,22.8 22.5,28 30.7,28 30.7,30.4 19.5,30.4 19.5,13.3 30.7,13.3 30.7,15.7 22.5,15.7
+            22.5,20.4 30.7,20.4 "></polygon>
+            <path fill="#00BFBF" d="M45.6,26.4H39l-1.4,4h-3.1L41,13.3h2.7l6.5,17.2H47L45.6,26.4z M39.8,24h5l-2.5-7.1L39.8,24z">
+            </path>
+            <polygon fill="#00BFBF" points="56.2,28 64,28 64,30.4 53.2,30.4 53.2,13.3 56.2,13.3 "></polygon>
+            <polygon fill="#00BFBF" points="79.2,15.7 73.8,15.7 73.8,30.4 70.9,30.4 70.9,15.7 65.6,15.7 65.6,13.3 79.2,13.3 ">
+            </polygon>
+            <path fill="#00BFBF" d="M98.1,20.4v-7.1h3v17.2h-3v-7.6h-7.7v7.6h-3V13.3h3v7.1H98.1z M110.6,19.3l5-6h3.6l-6.4,7.6l6.7,9.6H116
+            l-5.2-7.4l-1.9,2.1v5.3h-3V13.3h3v8L110.6,19.3z M82.6,42.7h41.7V1H82.6V42.7z"></path>
+            <path fill="#00BFBF" d="M138.3,26.4h-6.6l-1.4,4h-3.1l6.5-17.2h2.7l6.5,17.2h-3.1L138.3,26.4z M132.5,24h5l-2.5-7.1L132.5,24z">
+            </path>
+            <g>
+                <path fill="#00BFBF" d="M153.1,23.8h-3.3v6.6h-3V13.3h6c1,0,1.9,0.1,2.6,0.3c0.8,0.2,1.4,0.6,2,1c0.5,0.4,0.9,1,1.2,1.6
+            c0.3,0.6,0.4,1.4,0.4,2.2c0,1.1-0.3,2.1-0.8,2.9c-0.6,0.8-1.3,1.4-2.3,1.8l3.9,7.2v0.2h-3.2L153.1,23.8z M149.8,21.4h3.1
+            c0.5,0,1-0.1,1.4-0.2c0.4-0.1,0.7-0.3,1-0.6c0.3-0.3,0.5-0.5,0.6-0.9c0.1-0.3,0.2-0.7,0.2-1.1c0-0.4-0.1-0.8-0.2-1.2
+            c-0.1-0.4-0.3-0.7-0.6-0.9c-0.3-0.3-0.6-0.5-1-0.6c-0.4-0.1-0.9-0.2-1.5-0.2h-3.1V21.4z"></path>
+                <polygon fill="#00BFBF" points="176,15.7 170.7,15.7 170.7,30.4 167.7,30.4 167.7,15.7 162.4,15.7 162.4,13.3 176,13.3 ">
+                </polygon>
+            </g>
+        </svg></div>
+        <div id="searchCont">
+            <img class="glass" src="https://static1.hkrtcdn.com/hknext/static/media/common/header/search-icon-grey-2.svg">
+            <input id="search" type="text" placeholder="Search for products, brands or Health Goals" spellcheck="false" data-ms-editor="true">
+        </div>
+        <div id="headCart">
+          <div> Loyal Rewards <span class="ima">&nbsp;|</span></div>
+          <div>Customer Support
+            <span class="ima"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/arrow-down.svg" alt="">&nbsp;|</span>
+         </div>
+          <div id="accounts">My Account &amp; Orders
+          <span class="ima"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/arrow-down.svg" alt="">&nbsp;|</span>
+           <div id="dropTable">
+               <div id="sI">LogIn</div>
+               <div id="lO">New user? / Sign up</div>
+               <div id="insideDrop">
+                <div id="f1">
+                    <div>My Account</div>
+                    <div><span><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-orders.svg" alt="" srcset=""></span>&nbsp; Orders</div>
+                    <div><span><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-wishlist.svg" alt="" srcset=""></span>&nbsp; Witch List</div>
+                    <div><span><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/loyalty-rewards.svg" alt="" srcset=""></span>&nbsp; Loyal Rewards</div>
+                </div>
+                <div id="f2">
+                    <div>Health Profile</div>
+                    <div>&nbsp; Diet Plan</div>
+                    <div>&nbsp; My Consultants</div>
+                    <div>&nbsp; Recommended Products</div>
+                </div>
+               </div>
+           </div>
+        </div>
+          <div id="cart"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/cart.svg" alt="cart"></div>
+        </div>
+    </div>
+</section>
+<hr>
+<section>
+     <div id="belowNav">
+        <div id="catag">
+        <div id="catagfirst">Category</div>
+        <div>Brand</div>
+        <div id="genderSec">Gender
+            <div id="gend-DroDwn">
+                 <div id="gen_content">
+                     <div class="gender_text">Shop By Gender</div>
+                     <div id="cat_menWomen">
+                         <div id="div_cat_Men"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/man-2.svg" alt="" srcset="">
+                             <div>MEN</div>
+                        </div>
+                         <div id="div_cat_Women"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/woman-2.svg" alt="" srcset="">
+                           <div>WOMEN</div>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+        </div>
+        <div>Goal</div>
+        <div id="bestSells">Bestsellers
+        <div id="catogBestSeller">
+            <div id="sellerCat1">
+                <div id="sNutri">Sport Nutrition</div>
+                <div id="hNutri">Health Nutrition</div>
+            </div>
+            <div id="sellerCat2">
+                <div id="forSport">
+                    <div>Protein Powder</div>
+                    <div>Masss Gainer</div>
+                    <div>Whey Protein</div>
+                    <div>Health Booster</div>
+                </div>
+                <div id="forhealth">
+                    <div>Protein A</div>
+                    <div>Mas B</div>
+                    <div>Protein C</div>
+                    <div>Health Booster G</div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div>Deals</div>
+        <div>Gift Card</div>
+        <div id="cataglast">Blog,Video &amp; More</div>
+        </div>
+        <div id="store">
+            <div id="hk"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/hk-consult.svg" alt="" srcset="">
+                <span id="cons">&nbsp;HK Consult</span>
+                <div id="myDIV">
+                    <h1>Consult Services</h1>
+                    <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg" alt=""></span>&nbsp;&nbsp;Health Profile</p>
+                    <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/book-consultation-icon.svg" alt=""></span>&nbsp;&nbsp;Book a Consultation</p>
+                    <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg" alt=""></span>&nbsp;&nbsp;Recommend a Product</p>
+                    <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/what-we-offer-icon.svg" alt=""></span>&nbsp;&nbsp;Service Programs</p>
+                    <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg" alt=""></span>&nbsp;&nbsp;Workout at Home</p>
+                 </div>
+            </div>
+            <div id="st_store"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/location-pin.svg" alt="" srcset="">&nbsp;Find a Store
+            </div>
+        </div>
+     </div>
+</section>
+<hr></div>
+<!-- header -->
+    <div id="slide">
+        <button id="left"></button>
+        <button id="right"></button>
+        <div><img src="https://img7.hkrtcdn.com/16890/bnr_1688956_o.jpg" alt=""></div>
+        <div><img src="https://img9.hkrtcdn.com/16890/bnr_1688958_o.jpg" alt=""></div>
+        <div><img src="https://img5.hkrtcdn.com/16741/bnr_1674004_o.jpg" alt=""></div>
+        <div><img src="https://img7.hkrtcdn.com/16570/bnr_1656956_o.jpg" alt=""></div>
+        <div><img src="https://img7.hkrtcdn.com/16808/bnr_1680736_o.jpg" alt=""></div>
+        <div><img src="https://img5.hkrtcdn.com/16695/bnr_1669424_o.png" alt=""></div>
+        <div><img src="https://img9.hkrtcdn.com/16808/bnr_1680738_o.png" alt=""></div>
+        <div><img src="https://img10.hkrtcdn.com/14086/bnr_1408549_o.jpg" alt=""></div>
+        <div><img src="https://img2.hkrtcdn.com/14086/bnr_1408551_o.jpg" alt=""></div>
+        <div><img src="https://img6.hkrtcdn.com/14609/bnr_1460845_o.png" alt=""></div>
+    </div>
+
+    <!--- flash sale -->
+
+
+    <div class="cont" id="box_flash_sale">
+        <div class="inner1_f">
+            <div><i class="fas fa-bolt"></i> Flash Sale</div>
+            <button class="view_btn_f" onclick="productPage()" >View All</button>
+        </div>
+        <div class="inner2_f" id="inner2_f">
+             <!-- trail-->
+              
+   <% flashsale_protiens.forEach((product)=> {%>
+
+    <div class="inner2_1_f" id="inner2_1_f"  >
+         <div class="inner2_1_1_f">
+            <img class="img2" src=  <%=product.flash_sale_img %> />
+            <div><%= product.units %></div>
+            <div class="timer" id="timers"></div>
+         </div>
+         <div>
+            <img  class="main_img" src=<%= product.imgProduct %> />
+         </div>
+         <div>
+            <div>
+              <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%=product.price_off %></span>
+            </div>
+            <div><%=product.name %></div>
+            <small class="inner2_1_3_3_f">
+                 <%=product.rating %>  
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star" aria-hidden="true"></i>
+                <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+            </small>
+           <div class="inner2_1_3_4_f">
+               <div class="inner2_1_3_4_1_f"><%=product.price %>  </div>
+               <button id="inner2_1_3_4_2_f"   class="add_to_cart_btn" style="display: flex;">
+                   <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                   <div>ADD</div>
+               </button>
+           </div>
+           <div class="inner2_1_3_5_f">
+                  <div class="inner2_1_3_5_1_f">Premium Price:</div>
+                  <div class="inner2_1_3_5_2_f"><%=product.premium_price %>  </div>
+           </div>
+        </div>
+    </div>
+  
+  
+       <% }) %>
+       <!-- trail-->
+        </div>
+        <button class="LEFTbtn" id="trendingLeftBtn"></button>
+        <button class="RIGHTbtn" id="trendingRightBtn"> </button>
+    </div>
+
+
+
+
+
+    <!--- flash sale -->
+
+    <!-- trending Now -->
+
+
+    <div class="cont" id="box_trending_now">
+        <div class="inner1_f">
+            <div> Trending Now</div>
+            <button class="view_btn_f" onclick="productPage()">View All</button>
+        </div>
+        <div class="inner2_f" id="inner2_trendingNow">
+             <!-- trail-->
+             <% trendingNow_protiens.forEach((product)=> {  %>
+                  
+       <div  id="inner2_1_f" class="inner2_1_f"  >
+        <div>
+           <img  class="main_img" src= <%=product.imgProduct %>  />
+        </div>
+        <div>
+           <div>
+             <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%= product.price_off%> </span>
+           </div>
+           <div><%=  product.name %></div>
+               <small class="inner2_1_3_3_f"> <%= product.rating %>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star" aria-hidden="true"></i>
+                       <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+               </small>
+               <div class="inner2_1_3_4_f">
+                   <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
+                   <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
+                         <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                         <div> ADD </div>
+                   </button>
+              </div>
+              <div class="inner2_1_3_5_f">
+                   <div class="inner2_1_3_5_1_f">Premium Price:</div>
+                   <div class="inner2_1_3_5_2_f"><%= product.premium_price %></div>
+             </div>
+          </div>
+   </div>
+
+                    
+             <% }) %>
+         
+        
+            <!-- trail-->
+        </div>
+        <button class="LEFTbtn" id="trendingLeftBtn_trendingNow"></button>
+        <button class="RIGHTbtn" id="trendingRightBtn_trendingNow"> </button>
+    </div>
+
+    <!-- trending Now -->
+
+
+    <!-- category -->
+    <div id="category">
+        <h1>What are you looking for, User?</h1>
+        <div>
+            <img src="https://img2.hkrtcdn.com/13437/normal_1343641_o.png" alt="">
+            <img src="https://img8.hkrtcdn.com/13471/normal_1347067_o.png" alt="">
+            <img src="https://img8.hkrtcdn.com/13530/bnr_1352997_o.png" alt="">
+            <img src="https://img6.hkrtcdn.com/15625/bnr_1562425_o.png" alt="">
+            <img src="https://img4.hkrtcdn.com/13471/normal_1347073_o.png" alt="">
+            <img src="https://img6.hkrtcdn.com/13471/normal_1347075_o.png" alt="">
+            <img src="https://img4.hkrtcdn.com/13465/normal_1346413_o.png" alt="">
+            <img src="https://img10.hkrtcdn.com/13471/normal_1347079_o.png" alt="">
+        </div>
+    </div>
+    <!-- category -->
+
+    <!-- popular in sports -->
+
+    <div class="popular" id="box_popular_for_sport">
+        <div class="inner1_pop"> Popular in Sports Nutrition</div>
+        <div class="inner2_pop">
+            <div class="inner2_1_pop" id="inner2_1_popular_for_sport">
+                <!-- trail-->
+                        
+               <% popular_in_weights.forEach((product)=> {%>
+
+                    <div class="hide">
+                         <img class="img1_pop" src=<%=product.img %> />
+                         <div class="p_pop"><%=product.name %></div>
+                     </div>
+
+             <% }) %>
+                <!--- trail -->
+                <button class="popularLeft" id="trendingLeftBtn_popular_for_sport"></button>
+                <button class="popularRight" id="trendingRightBtn_popular_for_sport"> </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- popular in sports -->
+
+    <!-- popular in weight -->
+    <div class="popular" id="box_popular_in_weight">
+        <div class="inner1_pop"> Popular in Weight Loss</div>
+        <div class="inner2_pop">
+            <div class="inner2_1_pop" id="inner2_1_popular_in_weight">
+                <!--- trail-->
+                <% popular_in_weights.forEach((product)=> {%>
+
+                    <div class="hide" >
+                         <img class="img1_pop" src=<%=product.img %> />
+                         <div class="p_pop"><%=product.name %></div>
+                     </div>
+
+             <% }) %>
+                 <!--- trail-->
+                <button class="popularLeft" id="trendingLeftBtn_popular_in_weight"></button>
+                <button class="popularRight" id="trendingRightBtn_popular_in_weight"> </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- popular in weight -->
+
+    <!--- trending in whey -->
+
+
+    <div class="cont" id="box_trending_whey">
+        <div class="inner1_f">
+            <div> Trending in Whey Protien </div>
+            <button class="view_btn_f" onclick="productPage()">View All</button>
+        </div>
+        <div class="inner2_f" id="inner2_trending_whey">
+                 <% trendingNow_protiens.forEach((product)=> {%>
+
+
+
+
+       <div class="inner2_1_f" id="inner2_1_f" >
+               <div>
+                  <img  class="main_img" src= <%=product.imgProduct %>  />
+               </div>
+               <div>
+                  <div>
+                    <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%= product.price_off%> </span>
+                  </div>
+                  <div><%=  product.name %></div>
+                      <small class="inner2_1_3_3_f"> <%= product.rating %>
+                              <i class="fas fa-star" aria-hidden="true"></i>
+                              <i class="fas fa-star" aria-hidden="true"></i>
+                              <i class="fas fa-star" aria-hidden="true"></i>
+                              <i class="fas fa-star" aria-hidden="true"></i>
+                              <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                      </small>
+                      <div class="inner2_1_3_4_f">
+                          <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
+                          <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
+                                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                <div>ADD</div>
+                          </button>
+                     </div>
+                     <div class="inner2_1_3_5_f">
+                          <div class="inner2_1_3_5_1_f">Premium Price:</div>
+                          <div class="inner2_1_3_5_2_f"><%= product.premium_price %></div>
+                    </div>
+                 </div>
+          </div>
+
+
+
+    <% }) %>
+ 
+        </div>
+        <button class="LEFTbtn" id="trendingLeftBtn_whey_protiens"></button>
+        <button class="RIGHTbtn" id="trendingRightBtn_whey_protiens"> </button>
+    </div>
+
+    <!--- trending in whey -->
+
+    <!---  popular in health -->
+
+    <div class="popular" id="box_popular_in_health">
+        <div class="inner1_pop"> Popular in Health Foods & Drinks</div>
+        <div class="inner2_pop">
+           
+            <div class="inner2_1_pop" id="inner2_1_popular_in_health">
+
+                 <!-- trail --> 
+            <% popular_in_weights.forEach((product)=> {%>
+
+                <div class="hide" >
+                     <img class="img1_pop" src=<%=product.img %> />
+                     <div class="p_pop"><%=product.name %></div>
+                 </div>
+
+         <% }) %>
+
+            <!---trail--->
+                <button class="popularLeft" id="trendingLeftBtn_popular_in_health"></button>
+                <button class="popularRight" id="trendingRightBtn_popular_in_health"> </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!---  popular in health -->
+
+    <!-- trending in Mass Gainer -->
+
+    <div class="cont" id="box_trending_in_massGainer">
+        <div class="inner1_f">
+            <div> Trending in Mass Gainers </div>
+            <button class="view_btn_f" onclick="productPage()">View All</button>
+        </div>
+        <div class="inner2_f" id="inner2_trending_in_massGainer">
+            <% trendingNow_protiens.forEach((product)=> {%>
+
+
+
+
+                <div class="inner2_1_f" id="inner2_1_f" >
+                        <div>
+                           <img  class="main_img" src= <%=product.imgProduct %>  />
+                        </div>
+                        <div>
+                           <div>
+                             <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%= product.price_off%> </span>
+                           </div>
+                           <div><%=  product.name %></div>
+                               <small class="inner2_1_3_3_f"> <%= product.rating %>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                               </small>
+                               <div class="inner2_1_3_4_f">
+                                   <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
+                                   <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
+                                         <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                         <div>ADD</div>
+                                   </button>
+                              </div>
+                              <div class="inner2_1_3_5_f">
+                                   <div class="inner2_1_3_5_1_f">Premium Price:</div>
+                                   <div class="inner2_1_3_5_2_f"><%= product.premium_price %></div>
+                             </div>
+                          </div>
+                   </div>
+         
+         
+         
+             <% }) %>
+         
+        </div>
+        <button class="LEFTbtn" id="trendingLeftBtn_trending_in_massGainer"></button>
+        <button class="RIGHTbtn" id="trendingRightBtn_trending_in_massGainer"> </button>
+    </div>
+
+
+    <!-- trending in Mass Gainer -->
+
+
+    <!-- popular in fitness -->
+
+    <div class="popular" id="box_popular_in_fitness">
+        <div class="inner1_pop">Popular in Fitness</div>
+        <div class="inner2_pop">
+            <div class="inner2_1_pop" id="inner2_1_popular_in_fitness">
+               <!-- trail --> 
+            <% popular_in_weights.forEach((product)=> {%>
+
+                <div class="hide">
+                     <img class="img1_pop" src=<%=product.img %> />
+                     <div class="p_pop"><%=product.name %></div>
+                 </div>
+
+         <% }) %>
+
+            <!---trail--->
+            <button class="popularLeft" id="trendingLeftBtn_popular_in_fitness"></button>
+            <button class="popularRight" id="trendingRightBtn_popular_in_fitness"> </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- popular in fitness -->
+
+    <!--- trending in Premium supliment-->
+
+
+    <div class="cont" id="box_trending_premium">
+        <div class="inner1_f">
+            <div> Trending in Premium Supplements </div>
+            <button class="view_btn_f" onclick="productPage()">View All</button>
+        </div>
+        <div class="inner2_f" id="inner2_trending_premium">
+            <% trendingNow_protiens.forEach((product)=> {%>
+
+
+
+
+                <div class="inner2_1_f" id="inner2_1_f" >
+                        <div>
+                           <img  class="main_img" src= <%=product.imgProduct %>  />
+                        </div>
+                        <div>
+                           <div>
+                             <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%= product.price_off%> </span>
+                           </div>
+                           <div><%=  product.name %></div>
+                               <small class="inner2_1_3_3_f"> <%= product.rating %>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                               </small>
+                               <div class="inner2_1_3_4_f">
+                                   <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
+                                   <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
+                                         <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                         <div>ADD</div>
+                                   </button>
+                              </div>
+                              <div class="inner2_1_3_5_f">
+                                   <div class="inner2_1_3_5_1_f">Premium Price:</div>
+                                   <div class="inner2_1_3_5_2_f"><%= product.premium_price %></div>
+                             </div>
+                          </div>
+                   </div>
+         
+         
+         
+             <% }) %>
+         
+        </div>
+        <button class="LEFTbtn" id="trendingLeftBtn_trending_premium"></button>
+        <button class="RIGHTbtn" id="trendingRightBtn_trending_premium"> </button>
+    </div>
+
+
+    <!--- trending in Premium supliment-->
+
+    <!-- TrueBasics -->
+
+    <div id="truebasic">
+        <div>
+            <img src="https://img6.hkrtcdn.com/7590/bnr_758975_o.png" alt="">
+            <div>
+                <h4>TrueBasics Flat 10% Off</h4>
+                <p>Clinically Researched Essentials</p>
+                <button>shop now</button>
+            </div>
+        </div>
+        <div class="block_div"></div>
+        <div>
+            <img src="https://img6.hkrtcdn.com/3343/bnr_334225_o.png" alt="">
+            <div>
+                <h4>MuscleBlaze Upto 25% Off</h4>
+                <p>More Power To You</p>
+                <button>shop now</button>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    <!-- TrueBasics -->
+
+
+    <!-- just launched -->
+
+    <div class="cont" id="box_just_Lanch">
+        <div class="inner1_f">
+            <div>Just Launched Product </div>
+            <button class="view_btn_f" onclick="productPage()">View All</button>
+        </div>
+        <div class="inner2_f" id="inner2_just_Lanch">
+            <% trendingNow_protiens.forEach((product)=> {%>
+
+
+
+
+                <div class="inner2_1_f" id="inner2_1_f" >
+                        <div>
+                           <img  class="main_img" src= <%=product.imgProduct %>  />
+                        </div>
+                        <div>
+                           <div>
+                             <span id="inner2_1_3_1_fl" class="inner2_1_3_2_f"><%= product.price_off%> </span>
+                           </div>
+                           <div><%=  product.name %></div>
+                               <small class="inner2_1_3_3_f"> <%= product.rating %>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star" aria-hidden="true"></i>
+                                       <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                               </small>
+                               <div class="inner2_1_3_4_f">
+                                   <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
+                                   <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
+                                         <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                         <div>ADD</div>
+                                   </button>
+                              </div>
+                              <div class="inner2_1_3_5_f">
+                                   <div class="inner2_1_3_5_1_f">Premium Price:</div>
+                                   <div class="inner2_1_3_5_2_f"><%= product.premium_price %></div>
+                             </div>
+                          </div>
+                   </div>
+         
+         
+         
+             <% }) %>
+         
+        </div>
+        <button class="LEFTbtn" id="trendingLeftBtn_just_Lanch"></button>
+        <button class="RIGHTbtn" id="trendingRightBtn_just_Lanch"> </button>
+    </div>
+
+
+    <!-- just launched -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="features">
+        <div class="box">
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/hk-cash-icon.svg" alt="">
+            <h3>Earn HK Cash</h3>
+            <p>Shop with us and get HK Cash to redeem on your next purchase. Know more about HK Cash</p>
+
+        </div>
+        <div class="box">
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/safe-payment-icon.svg" alt="">
+            <h3>Safe Payments</h3>
+            <p>Pay with the world’s most popular and secure payment methods.</p>
+
+        </div>
+        <div class="box">
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/authenticity-icon.svg" alt="">
+            <h3>Authenticity Guaranteed</h3>
+            <p>100% authentic products for our customers</p>
+
+        </div>
+        <div class="box">
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/andriod-icon.svg" alt="">
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/apple-icon.svg" alt="">
+            <h3>Download Healthkart App</h3>
+            <p>Get the best experience of Healthkart at your fingertips.</p>
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/playstore-icon.svg" alt="">
+            <img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/appstore-icon.svg" alt="">
+
+        </div>
+
+    </div>
+    <!-- footer -->
+    <div id="main"><footer id="footer">
+        <div class="col">
+            <h4>HEALTHKART</h4>
+            <div class="text"> <a href="about.html">About Us</a> </div>
+            <div class="text"> <a href="#"> Contact Us</a> </div>
+            <div class="text"> <a href="#">Refer &amp; Earn</a> </div>
+            <div class="text"> <a href="#">Loyalty Program</a> </div>
+            <div class="text"> <a href="#">HK Consult</a> </div>
+            <div class="text"> <a href="#">Blogs,Videos &amp; More</a> </div>
+            <div class="text"> <a href="#">Brand Directory</a> </div>
+            <div class="text"> <a href="#">Authenticity Guaranteed</a> </div>
+            <div class="text"> <a href="#"> Careers</a> </div>
+        </div>
+        <div class="col">
+            <h4>BRANDS</h4>
+            <div class="text"> <a href="#">MuscleBlaze</a> </div>
+            <div class="text"> <a href="#">TrueBasics</a> </div>
+            <div class="text"> <a href="#">JustHer</a> </div>
+            <div class="text"> <a href="#">Nouriza</a> </div>
+            <div class="text"> <a href="#">Gritzo</a> </div>
+            <div class="text"> <a href="#"> bGREEN</a> </div>
+        </div>
+        <div class="col">
+            <h4>HEALTH &amp; FITTNESS</h4>
+            <div class="text"> <a href="#">Bodybuilding</a> </div>
+            <div class="text"> <a href="#"> Weight Loss</a> </div>
+            <div class="text"> <a href="#">Hair &amp; Skin Care</a> </div>
+            <div class="text"> <a href="#"> Sports Nutrtion</a> </div>
+            <div class="text"> <a href="#">Vitamin &amp; Supplements</a> </div>
+            <div class="text"> <a href="#">Ayurveda &amp; Herbs</a> </div>
+            <div class="text"> <a href="#">Health Food &amp; Drinks</a> </div>
+            <div class="text"> <a href="#">Fittness</a> </div>
+            <div class="text"> <a href="#">Wellness</a> </div>
+            <div class="text"> <a href="#">Consult Plans</a> </div>
+        </div>
+        <div class="col">
+            <h4>POLICIES</h4>
+            <div class="text"> <a href="#">Terms &amp; Conditions</a> </div>
+            <div class="text"> <a href="#">Delivery Policy</a> </div>
+            <div class="text"> <a href="#">Privacy Policy</a> </div>
+            <div class="text"> <a href="#">Returns Policy</a> </div>
+        </div>
+        <div class="col">
+            <h4>QUICK LINKS</h4>
+            <div class="text"> <a href="#">My Account</a> </div>
+            <div class="text"> <a href="#">Track Your Order</a> </div>
+            <div class="text"> <a href="#">Store Locator</a> </div>
+            <div class="text"> <a href="#">HK Cash</a> </div>
+            <div class="text"> <a href="#">HK Coupons</a> </div>
+            <div class="text"> <a href="#">FAQs</a> </div>
+            <div class="text"> <a href="#">Sell On HealthKart</a> </div>
+        </div>
+        <div class="col">
+            <h4>ABOUT HEALTHKART</h4>
+            <p>HealthKart.com is India’s largest online health &amp; fitness store for men and women. Shop online from
+                the latest collections of health, fitness and similar products featuring the best brands.</p>
+            <div class="col upper">
+                <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+                <p>Be the first one to receive amazing offers, deals and news</p>
+            </div>
+            <input class="input" type="text" placeholder="Enter your email" spellcheck="false" data-ms-editor="true">
+            <span><button class="subcribe_btn">SUBSCRIBE</button></span>
+            <div id="socialMedia">
+                <h4>CONNECT WITH US</h4>
+                <div>
+    
+                    <a href="https://www.facebook.com/healthkart"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/facebook.svg" alt=""></a>
+                    <a href="https://www.instagram.com/healthkart/?hl=en"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/instagram.svg" alt=""></a>
+                    <a href="https://www.linkedin.com/company/healthkart/"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/linkedIn_logo.png" alt=""></a>
+                    <a href="https://twitter.com/healthkart"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/twitter.svg" alt=""></a>
+                    <a href="https://www.youtube.com/user/healthkart"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/youtube.svg" alt=""></a>
+                    <a href="https://in.pinterest.com/healthkart/"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/footer/pinterest.svg" alt=""></a>
+                </div>
+    
+            </div>
+        </div>
+    </footer></div>
+
+    <!--- footer -->
+
+
+</body>
+
+</html>
+
+<script>
+    
+// sliding for single object
+
+let count = 0;
+
+let slide = document.querySelectorAll('#slide>div');
+console.log(slide);
+
+function startSlide() {
+    slide[count].style.display = 'block'
+
+
+}
+
+//export {startSlide}
+startSlide()
+let btnRight = document.getElementById('right');
+
+btnRight.onclick = function () {
+    if (count < slide.length - 1) {
+
+        slide[count].style.display = 'none'
+        count++
+        startSlide()
+    }
+}
+
+
+
+let btnLeft = document.getElementById('left');
+btnLeft.onclick = function () {
+    if (count > 0) {
+        slide[count].style.display = 'none'
+        count--
+        startSlide()
+    }
+}
+
+setInterval(() => {
+
+    if (count == slide.length - 1) {
+
+        slide[count].style.display = 'none'
+        count = 0;
+        slide[count].style.display = 'block'
+
+
+    }
+    else {
+
+        slide[count].style.display = 'none'
+
+        count++
+        slide[count].style.display = 'block'
+    }
+
+}, 4000);
+// ending   ending           ending         ending             ending        ending     ending   
+  
+</script>
+
+
+<script>
+    
+///     timer of product //////
+const startingMinutes = 59;
+let time = startingMinutes * 60;
+
+const countdownEl = document.getElementById('timers')
+// const countdownEl = document.getElementsByClassName('timer')
+
+setInterval(updateCountdown, 1000)
+
+
+function updateCountdown() {
+    const minutes = Math.floor(time / 60)
+    let seconds = time % 60
+    // let seconds = seconds <10 ? '0' + seconds : seconds;
+
+    countdownEl.innerHTML = `12:${minutes}:${seconds}`;
+    time--;
+
+    if (time === 0) {
+        time = startingMinutes * 60
+    }
+}
+
+
+
+
+
+
+
+
+//  slide script for multiple products
+
+let parent = document.getElementById('inner2_f')
+
+let trendingLeftBtn = document.getElementById('trendingLeftBtn');
+
+
+let trendingRightBtn = document.getElementById('trendingRightBtn')
+
+let leftTrending = 0;
+let rightTrending = 4;
+
+let divsTrending = document.querySelectorAll('#inner2_f>div')
+console.log(divsTrending);
+function trendingSlide() {
+    for (let i = leftTrending; i < rightTrending; i++) {
+        divsTrending[i].style.display = 'block'
+
+    }
+
+
+
+}
+trendingSlide()
+
+
+trendingRightBtn.onclick = function () {
+    divsTrending[leftTrending].style.display = 'none'
+    leftTrending++
+    rightTrending++
+    trendingSlide()
+
+    if (leftTrending > 0) {
+        trendingLeftBtn.style.display = 'block'
+    }
+    if (rightTrending === divsTrending.length) {
+        trendingRightBtn.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn.onclick = function () {
+    leftTrending--
+    rightTrending--
+    divsTrending[rightTrending].style.display = 'none'
+
+    trendingSlide()
+    if (leftTrending == 0) {
+        trendingLeftBtn.style.display = 'none'
+    }
+
+    if (rightTrending < divsTrending.length) {
+        trendingRightBtn.style.display = 'block'
+    }
+}
+
+
+//////////////////// flash sale //////////////////////
+
+
+/////////// popular in sport ////////////////
+
+
+//  slide script for multiple products
+
+
+let trendingLeftBtn_popular_for_sport = document.getElementById('trendingLeftBtn_popular_for_sport');
+
+
+let trendingRightBtn_popular_for_sport = document.getElementById('trendingRightBtn_popular_for_sport')
+
+let leftTrending_popular_for_sport = 0;
+let rightTrending_popular_for_sport = 4;
+
+let divsTrending_popular_for_sport = document.querySelectorAll('#inner2_1_popular_for_sport>div')
+console.log(divsTrending_popular_for_sport);
+function popular_for_sport() {
+    for (let i = leftTrending_popular_for_sport; i < rightTrending_popular_for_sport; i++) {
+        divsTrending_popular_for_sport[i].style.display = 'block'
+
+    }
+
+
+
+}
+popular_for_sport()
+
+
+trendingRightBtn_popular_for_sport.onclick = function () {
+    divsTrending_popular_for_sport[leftTrending_popular_for_sport].style.display = 'none'
+    leftTrending_popular_for_sport++
+    rightTrending_popular_for_sport++
+    popular_for_sport()
+
+    if (leftTrending_popular_for_sport > 0) {
+        trendingLeftBtn_popular_for_sport.style.display = 'block'
+    }
+    if (rightTrending_popular_for_sport === divsTrending_popular_for_sport.length) {
+        trendingRightBtn_popular_for_sport.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_popular_for_sport.onclick = function () {
+    leftTrending_popular_for_sport--
+    rightTrending_popular_for_sport--
+    divsTrending_popular_for_sport[rightTrending_popular_for_sport].style.display = 'none'
+
+    popular_for_sport()
+    if (leftTrending_popular_for_sport == 0) {
+        trendingLeftBtn_popular_for_sport.style.display = 'none'
+    }
+
+    if (rightTrending_popular_for_sport < divsTrending_popular_for_sport.length) {
+        trendingRightBtn_popular_for_sport.style.display = 'block'
+    }
+}
+
+
+/////////// popular in sport ////////////////
+
+
+///////////// popular in weight ////////////
+//  slide script for multiple products
+
+
+
+let trendingLeftBtn_popular_in_weight = document.getElementById('trendingLeftBtn_popular_in_weight');
+
+
+let trendingRightBtn_popular_in_weight = document.getElementById('trendingRightBtn_popular_in_weight')
+
+let leftTrending_popular_in_weight = 0;
+let rightTrending_popular_in_weight = 4;
+
+let divsTrending_popular_in_weight = document.querySelectorAll('#inner2_1_popular_in_weight>div')
+console.log(divsTrending_popular_in_weight);
+function popular_in_weight() {
+    for (let i = leftTrending_popular_in_weight; i < rightTrending_popular_in_weight; i++) {
+        divsTrending_popular_in_weight[i].style.display = 'block'
+
+    }
+
+
+
+}
+popular_in_weight()
+
+
+trendingRightBtn_popular_in_weight.onclick = function () {
+    divsTrending_popular_in_weight[leftTrending_popular_in_weight].style.display = 'none'
+    leftTrending_popular_in_weight++
+    rightTrending_popular_in_weight++
+    popular_in_weight()
+
+    if (leftTrending_popular_in_weight > 0) {
+        trendingLeftBtn_popular_in_weight.style.display = 'block'
+    }
+    if (rightTrending_popular_in_weight === divsTrending_popular_in_weight.length) {
+        trendingRightBtn_popular_in_weight.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_popular_in_weight.onclick = function () {
+    leftTrending_popular_in_weight--
+    rightTrending_popular_in_weight--
+    divsTrending_popular_in_weight[rightTrending_popular_in_weight].style.display = 'none'
+
+    popular_in_weight()
+    if (leftTrending_popular_in_weight == 0) {
+        trendingLeftBtn_popular_in_weight.style.display = 'none'
+    }
+
+    if (rightTrending_popular_in_weight < divsTrending_popular_in_weight.length) {
+        trendingRightBtn_popular_in_weight.style.display = 'block'
+    }
+}
+
+
+//////////// popular in weight /////////////
+
+
+///////////// popular in health ///////////
+
+
+//  slide script for multiple products
+
+
+
+let trendingLeftBtn_popular_in_health = document.getElementById('trendingLeftBtn_popular_in_health');
+
+
+let trendingRightBtn_popular_in_health = document.getElementById('trendingRightBtn_popular_in_health')
+
+let leftTrending_popular_in_health = 0;
+let rightTrending_popular_in_health = 4;
+
+let divsTrending_popular_in_health = document.querySelectorAll('#inner2_1_popular_in_health>div')
+console.log(divsTrending_popular_in_health);
+function Health_Foods_Drink() {
+    for (let i = leftTrending_popular_in_health; i < rightTrending_popular_in_health; i++) {
+        divsTrending_popular_in_health[i].style.display = 'block'
+
+    }
+
+
+
+}
+Health_Foods_Drink()
+
+
+trendingRightBtn_popular_in_health.onclick = function () {
+    divsTrending_popular_in_health[leftTrending_popular_in_health].style.display = 'none'
+    leftTrending_popular_in_health++
+    rightTrending_popular_in_health++
+    Health_Foods_Drink()
+
+    if (leftTrending_popular_in_health > 0) {
+        trendingLeftBtn_popular_in_health.style.display = 'block'
+    }
+    if (rightTrending_popular_in_health === divsTrending_popular_in_health.length) {
+        trendingRightBtn_popular_in_health.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_popular_in_health.onclick = function () {
+    leftTrending_popular_in_health--
+    rightTrending_popular_in_health--
+    divsTrending_popular_in_health[rightTrending_popular_in_health].style.display = 'none'
+
+    Health_Foods_Drink()
+    if (leftTrending_popular_in_health == 0) {
+        trendingLeftBtn_popular_in_health.style.display = 'none'
+    }
+
+    if (rightTrending_popular_in_health < divsTrending_popular_in_health.length) {
+        trendingRightBtn_popular_in_health.style.display = 'block'
+    }
+}
+
+
+
+///////////// popular in health ///////////
+
+
+/////////////// popular in fitness //////
+
+//  slide script for multiple products
+
+
+
+let trendingLeftBtn_popular_in_fitness = document.getElementById('trendingLeftBtn_popular_in_fitness');
+
+
+let trendingRightBtn_popular_in_fitness = document.getElementById('trendingRightBtn_popular_in_fitness')
+
+let leftTrending_popular_in_fitness = 0;
+let rightTrending_popular_in_fitness = 4;
+
+let divsTrending_popular_in_fitness = document.querySelectorAll('#inner2_1_popular_in_fitness>div')
+console.log(divsTrending_popular_in_fitness);
+function fitness_Foods_Drink() {
+    for (let i = leftTrending_popular_in_fitness; i < rightTrending_popular_in_fitness; i++) {
+        divsTrending_popular_in_fitness[i].style.display = 'block'
+
+    }
+
+
+
+}
+fitness_Foods_Drink()
+
+
+trendingRightBtn_popular_in_fitness.onclick = function () {
+    divsTrending_popular_in_fitness[leftTrending_popular_in_fitness].style.display = 'none'
+    leftTrending_popular_in_fitness++
+    rightTrending_popular_in_fitness++
+    fitness_Foods_Drink()
+
+    if (leftTrending_popular_in_fitness > 0) {
+        trendingLeftBtn_popular_in_fitness.style.display = 'block'
+    }
+    if (rightTrending_popular_in_fitness === divsTrending_popular_in_fitness.length) {
+        trendingRightBtn_popular_in_fitness.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_popular_in_fitness.onclick = function () {
+    leftTrending_popular_in_fitness--
+    rightTrending_popular_in_fitness--
+    divsTrending_popular_in_fitness[rightTrending_popular_in_fitness].style.display = 'none'
+
+    fitness_Foods_Drink()
+    if (leftTrending_popular_in_fitness == 0) {
+        trendingLeftBtn_popular_in_fitness.style.display = 'none'
+    }
+
+    if (rightTrending_popular_in_fitness < divsTrending_popular_in_fitness.length) {
+        trendingRightBtn_popular_in_fitness.style.display = 'block'
+    }
+}
+
+
+
+
+/////////// popular in fitness //////////
+</script>
+
+
+<script type="module">
+
+    let nav_div = document.getElementById("header-Navbar");
+    import navbar from './components/navbar.js'
+    nav_div.innerHTML = navbar();
+    import { makeNavbar } from './scripts/navbar.js'
+    makeNavbar();
+
+    import {footer} from './components/footer.js'
+    let main = document.getElementById('main')
+    main.innerHTML = footer();
+
+//////////////// trending now ////////////////
+
+
+//  slide script for multiple products
+
+//let parent = document.getElementById('inner2_f')
+
+let trendingLeftBtn_trendingNow = document.getElementById('trendingLeftBtn_trendingNow');
+
+
+let trendingRightBtn_trendingNow = document.getElementById('trendingRightBtn_trendingNow')
+
+let leftTrending_trendingNow = 0;
+let rightTrending_trendingNow = 4;
+
+let divsTrending_trendingNow = document.querySelectorAll('#inner2_trendingNow>div')
+console.log(divsTrending_trendingNow);
+function trendingSlide_trendingNow() {
+    for (let i = leftTrending_trendingNow; i < rightTrending_trendingNow; i++) {
+        divsTrending_trendingNow[i].style.display = 'block'
+
+    }
+
+
+
+}
+trendingSlide_trendingNow()
+
+
+trendingRightBtn_trendingNow.onclick = function () {
+    divsTrending_trendingNow[leftTrending_trendingNow].style.display = 'none'
+    leftTrending_trendingNow++
+    rightTrending_trendingNow++
+    trendingSlide_trendingNow()
+
+    if (leftTrending_trendingNow > 0) {
+        trendingLeftBtn_trendingNow.style.display = 'block'
+    }
+    if (rightTrending_trendingNow === divsTrending_trendingNow.length) {
+        trendingRightBtn_trendingNow.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_trendingNow.onclick = function () {
+    leftTrending_trendingNow--
+    rightTrending_trendingNow--
+    divsTrending_trendingNow[rightTrending_trendingNow].style.display = 'none'
+
+    trendingSlide_trendingNow()
+    if (leftTrending_trendingNow == 0) {
+        trendingLeftBtn_trendingNow.style.display = 'none'
+    }
+
+    if (rightTrending_trendingNow < divsTrending_trendingNow.length) {
+        trendingRightBtn_trendingNow.style.display = 'block'
+    }
+}
+
+
+
+
+
+
+///////////////// trending now //////////////
+
+
+////////////////// trending whey ////////////
+
+
+//  slide script for multiple products
+
+// let parent = document.getElementById('inner2_f')
+
+let trendingLeftBtn_whey_protiens = document.getElementById('trendingLeftBtn_whey_protiens');
+
+
+let trendingRightBtn_whey_protiens = document.getElementById('trendingRightBtn_whey_protiens')
+
+let leftTrending_whey_protiens = 0;
+let rightTrending_whey_protiens = 4;
+
+let divsTrending_whey_protiens = document.querySelectorAll('#inner2_trending_whey>div')
+console.log(divsTrending_whey_protiens);
+function trendingSlide_whey_protiens() {
+    for (let i = leftTrending_whey_protiens; i < rightTrending_whey_protiens; i++) {
+        divsTrending_whey_protiens[i].style.display = 'block'
+
+    }
+
+
+
+}
+trendingSlide_whey_protiens()
+
+
+trendingRightBtn_whey_protiens.onclick = function () {
+    divsTrending_whey_protiens[leftTrending_whey_protiens].style.display = 'none'
+    leftTrending_whey_protiens++
+    rightTrending_whey_protiens++
+    trendingSlide_whey_protiens()
+
+    if (leftTrending_whey_protiens > 0) {
+        trendingLeftBtn_whey_protiens.style.display = 'block'
+    }
+    if (rightTrending_whey_protiens === divsTrending_whey_protiens.length) {
+        trendingRightBtn_whey_protiens.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_whey_protiens.onclick = function () {
+    leftTrending_whey_protiens--
+    rightTrending_whey_protiens--
+    divsTrending_whey_protiens[rightTrending_whey_protiens].style.display = 'none'
+
+    trendingSlide_whey_protiens()
+    if (leftTrending_whey_protiens == 0) {
+        trendingLeftBtn_whey_protiens.style.display = 'none'
+    }
+
+    if (rightTrending_whey_protiens < divsTrending_whey_protiens.length) {
+        trendingRightBtn_whey_protiens_whey_protiens.style.display = 'block'
+    }
+}
+
+
+
+///////////////// trending whey ////////////
+
+/////////////////// trending in mass gainer ////////////
+
+
+
+//  slide script for multiple products
+
+
+
+let trendingLeftBtn_trending_in_massGainer = document.getElementById('trendingLeftBtn_trending_in_massGainer');
+
+
+let trendingRightBtn_trending_in_massGainer = document.getElementById('trendingRightBtn_trending_in_massGainer')
+
+let leftTrending_trending_in_massGainer = 0;
+let rightTrending_trending_in_massGainer = 4;
+
+let divsTrending_trending_in_massGainer = document.querySelectorAll('#inner2_trending_in_massGainer>div')
+console.log(divsTrending_trending_in_massGainer);
+function trendingSlide_trending_in_massGainer() {
+    for (let i = leftTrending_trending_in_massGainer; i < rightTrending_trending_in_massGainer; i++) {
+        divsTrending_trending_in_massGainer[i].style.display = 'block'
+
+    }
+
+
+
+}
+trendingSlide_trending_in_massGainer()
+
+
+trendingRightBtn_trending_in_massGainer.onclick = function () {
+    divsTrending_trending_in_massGainer[leftTrending_trending_in_massGainer].style.display = 'none'
+    leftTrending_trending_in_massGainer++
+    rightTrending_trending_in_massGainer++
+    trendingSlide_trending_in_massGainer()
+
+    if (leftTrending_trending_in_massGainer > 0) {
+        trendingLeftBtn_trending_in_massGainer.style.display = 'block'
+    }
+    if (rightTrending_trending_in_massGainer === divsTrending_trending_in_massGainer.length) {
+        trendingRightBtn_trending_in_massGainer.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_trending_in_massGainer.onclick = function () {
+    leftTrending_trending_in_massGainer--
+    rightTrending_trending_in_massGainer--
+    divsTrending_trending_in_massGainer[rightTrending_trending_in_massGainer].style.display = 'none'
+
+    trendingSlide_trending_in_massGainer()
+    if (leftTrending_trending_in_massGainer == 0) {
+        trendingLeftBtn_trending_in_massGainer.style.display = 'none'
+    }
+
+    if (rightTrending_trending_in_massGainer < divsTrending_trending_in_massGainer.length) {
+        trendingRightBtn_trending_in_massGainer.style.display = 'block'
+    }
+}
+
+/////////////////// trending in mass gainer ////////////
+
+
+///////////////// trending in premium product //////////
+
+
+//  slide script for multiple products
+
+
+let trendingLeftBtn_trending_premium = document.getElementById('trendingLeftBtn_trending_premium');
+
+
+let trendingRightBtn_trending_premium = document.getElementById('trendingRightBtn_trending_premium')
+
+let leftTrending_trending_premium = 0;
+let rightTrending_trending_premium = 4;
+
+let divsTrending_trending_premium = document.querySelectorAll('#inner2_trending_premium>div')
+console.log(divsTrending_trending_premium);
+function trending_premium() {
+    for (let i = leftTrending_trending_premium; i < rightTrending_trending_premium; i++) {
+        divsTrending_trending_premium[i].style.display = 'block'
+
+    }
+
+
+
+}
+trending_premium()
+
+
+trendingRightBtn_trending_premium.onclick = function () {
+    divsTrending_trending_premium[leftTrending_trending_premium].style.display = 'none'
+    leftTrending_trending_premium++
+    rightTrending_trending_premium++
+    trending_premium()
+
+    if (leftTrending_trending_premium > 0) {
+        trendingLeftBtn_trending_premium.style.display = 'block'
+    }
+    if (rightTrending_trending_premium === divsTrending_trending_premium.length) {
+        trendingRightBtn_trending_premium.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_trending_premium.onclick = function () {
+    leftTrending_trending_premium--
+    rightTrending_trending_premium--
+    divsTrending_trending_premium[rightTrending_trending_premium].style.display = 'none'
+
+    trending_premium()
+    if (leftTrending_trending_premium == 0) {
+        trendingLeftBtn_trending_premium.style.display = 'none'
+    }
+
+    if (rightTrending_trending_premium < divsTrending_trending_premium.length) {
+        trendingRightBtn_trending_premium.style.display = 'block'
+    }
+}
+
+///////////////// trending in premium product //////////
+
+
+/////////////////////// just launched /////////////
+
+
+let trendingLeftBtn_just_Lanch = document.getElementById('trendingLeftBtn_just_Lanch');
+
+
+let trendingRightBtn_just_Lanch = document.getElementById('trendingRightBtn_just_Lanch')
+
+let leftTrending_just_Lanch = 0;
+let rightTrending_just_Lanch = 4;
+
+let divsTrending_just_Lanch = document.querySelectorAll('#inner2_just_Lanch>div')
+console.log(divsTrending_just_Lanch);
+function just_Lanch() {
+    for (let i = leftTrending_just_Lanch; i < rightTrending_just_Lanch; i++) {
+        divsTrending_just_Lanch[i].style.display = 'block'
+
+    }
+
+
+
+}
+just_Lanch()
+
+
+trendingRightBtn_just_Lanch.onclick = function () {
+    divsTrending_just_Lanch[leftTrending_just_Lanch].style.display = 'none'
+    leftTrending_just_Lanch++
+    rightTrending_just_Lanch++
+    just_Lanch()
+
+    if (leftTrending_just_Lanch > 0) {
+        trendingLeftBtn_just_Lanch.style.display = 'block'
+    }
+    if (rightTrending_just_Lanch === divsTrending_just_Lanch.length) {
+        trendingRightBtn_just_Lanch.style.display = 'none'
+
+    }
+
+}
+
+trendingLeftBtn_just_Lanch.onclick = function () {
+    leftTrending_just_Lanch--
+    rightTrending_just_Lanch--
+    divsTrending_just_Lanch[rightTrending_just_Lanch].style.display = 'none'
+
+    just_Lanch()
+    if (leftTrending_just_Lanch == 0) {
+        trendingLeftBtn_just_Lanch.style.display = 'none'
+    }
+
+    if (rightTrending_just_Lanch < divsTrending_just_Lanch.length) {
+        trendingRightBtn_just_Lanch.style.display = 'block'
+    }
+}
+
+
+
+////////////////////////////  just launched /////////
+</script>
+
+<script type="module">
+  /*  var prodDesc = document.getElementById('proDesc');
+    import { appendProductForMen, appendBackground, addScripts } from '../public/js/index.js'
+
+    addScripts()
+
+    import { startSlide } from '../public/js/index.js'
+    let slide = document.getElementById('slide')
+
+    slide.innerHTML = startSlide()
+// console.log(object);
+
+*/
+
+</script>
+
+
+
+<script src="../public/js/index2.js">
+
+</script>
+

@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f6f6f7;
+      }
+      a {
+        cursor: pointer;
+      }
+      button {
+        cursor: pointer;
+      }
+
+      .topCatogCont {
+        width: 1170px;
+        height: 330px;
+        margin: auto;
+        border-radius: 7px;
+        background-color: white;
+        display: flex;
+      }
+      .container {
+        width: 1349px;
+        height: 590px;
+        background-color: #e1fafc;
+        margin: auto;
+      }
+      .textCont {
+        height: 312px;
+        width: 316px;
+        margin: auto;
+      }
+      .paratit {
+        margin-top: 19px;
+        font-size: 16px;
+        line-height: 23px;
+        color: #020202;
+        opacity: 0.7;
+        background: gainsboro;
+      }
+      .title {
+        font-size: 31px;
+        line-height: 39px;
+        font-weight: 400;
+        color: #020202;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      .imageCont {
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        width: 686px;
+        height: 312px;
+        margin: auto;
+        grid-gap: 15px;
+      }
+      .content {
+        box-shadow: 0 3px 5px rgb(99 115 129 / 20%);
+        width: 214.38px;
+        height: 142px;
+      }
+      .content img {
+        width: 100%;
+        height: 100%;
+      }
+      .why-item-container {
+        width: 1019px;
+        height: 114px;
+        margin: auto;
+        margin-top: 60px;
+        display: flex;
+      }
+      .whyItem {
+        width: 294px;
+        height: 100%;
+
+        margin: auto;
+        display: flex;
+        align-items: center;
+      }
+      .whyItem div img {
+        width: 52px;
+        height: 68px;
+      }
+      .whyItemtextContent {
+        width: 220px;
+        margin-left: 22px;
+      }
+      .para1WhyItem {
+        font-weight: 600;
+        margin-bottom: 7px;
+        font-size: 17px;
+        line-height: 22px;
+        color: #101010;
+      }
+      .para2WhyItem {
+        font-size: 14px;
+        line-height: 21px;
+        color: #101010;
+        opacity: 0.7;
+      }
+      .spotlightContainer {
+        height: 376px;
+        max-width: 1170px;
+        margin: 0 auto;
+        margin-top: 50px;
+      }
+      .spotlightPara {
+        height: 36px;
+        font-size: 28px;
+        color: #111;
+        font-weight: 400;
+      }
+      #proDesc {
+        height: 315px;
+        margin-top: 24px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #proDesc > div {
+        width: 267px;
+        height: 100%;
+        background-color: white;
+        border-radius: 9px;
+        cursor: pointer;
+        border: 1px solid #e0e0e0;
+        padding-bottom: 20px;
+      }
+      #proDesc > div > img {
+        width: 100%;
+      }
+
+      .imageOfPro img {
+        margin-left: 40px;
+        margin-top: 20px;
+      }
+      .title,
+      .reviewStars,
+      .price {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .title {
+        margin: 0 0 8px;
+        font-size: 15px;
+        line-height: 22px !important;
+        color: #545454;
+        height: 44px;
+        font-weight: 400;
+        overflow: hidden;
+      }
+      .reviewStars {
+        line-height: 40px;
+      }
+      .price {
+        font-size: 14px;
+        color: #212121;
+        outline: none;
+      }
+      #proCatog {
+        height: 226px;
+        margin-top: 24px;
+        border-radius: 9px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+      }
+      #proCatog > div {
+        height: 163px;
+        width: 196px;
+        margin-left: 20px;
+      }
+      #proCatog > div > img {
+        height: 123px;
+        margin-left: 10px;
+      }
+      .prod-name {
+        font-size: 18px;
+        line-height: 23px;
+        color: #101010;
+        text-align: center;
+      }
+      #healthPlans,
+      #healthPlansTWO {
+        height: 402px;
+        border: 1px solid rebeccapurple;
+        margin-top: 19px;
+        border-radius: 7px;
+        border: 1px solid #e0e0e0;
+        padding: 20px 80px 27px;
+        display: flex;
+        align-items: center;
+        background: #4f4b67;
+        justify-content: space-between;
+      }
+      #healthPlansTWO {
+        background-color: #4b6757;
+        margin-top: 50px;
+      }
+      .healthHeading {
+        width: 403.19px;
+        height: 103px;
+        color: #f7f7f7;
+      }
+      .healthHeading button {
+        padding: 14px 16px 12px;
+        font-size: 13px;
+        border-radius: 4px;
+        border: none;
+        margin-top: auto;
+        background-color: #fff;
+        color: #008382;
+        font-weight: 500;
+      }
+      .productsHeal {
+        width: 604px;
+        height: 333px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .productsHeal > div {
+        width: 255px;
+        height: 333px;
+        border: 1px solid #f2f2f2;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+        margin-left: 30px;
+      }
+      .productsHeal > div > img {
+        height: 162px;
+        margin-left: auto;
+      }
+      h4,
+      h3,
+      h2 {
+        padding-left: 20px;
+      }
+      h3 {
+        font-size: 17px;
+        font-weight: 600;
+        color: #212121;
+      }
+      #fAQ {
+        height: 876px;
+        margin-top: 34px;
+        border: 1px solid #e0e0e0;
+        border-radius: 7px;
+        background: #fff;
+        justify-content: center;
+      }
+      #faq-wrapper {
+        width: 994px;
+        height: 778px;
+        margin: auto;
+        margin-top: 50px;
+      }
+      .faq-title {
+        height: 36px;
+        margin-bottom: 52px;
+        font-size: 28px;
+        color: #111;
+        text-align: center;
+      }
+      .faq-content {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-gap: 100px;
+        grid-row-gap: 80px;
+      }
+      .heading {
+        font-size: 18px;
+        line-height: 21px;
+        color: #19191b;
+        font-weight: 400;
+      }
+      .descrip {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 26px;
+        color: #696871;
+      }
+      .slider-Box {
+        position: relative;
+        overflow: hidden;
+      }
+      #slider {
+        width: 100%;
+        display: inline-flex;
+        transition: 0.7s;
+      }
+      #slider img {
+        min-width: 100%;
+      }
+      .indicators {
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+      }
+      .indicators span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        margin: 2px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      a {
+        cursor: pointer;
+      }
+      button {
+        cursor: pointer;
+      }
+      #navCont {
+        display: flex;
+        margin: auto;
+        width: 1170px;
+        height: 87.5px;
+      }
+      #logo {
+        width: 197px;
+        height: 49px;
+        margin-top: 18px;
+        cursor: pointer;
+      }
+      #search {
+        width: 360px;
+        border: none;
+        margin-left: 10px;
+        background-color: #f7f7f7;
+      }
+      .glass {
+        margin-left: 10px;
+        width: 20px;
+      }
+      #searchCont {
+        display: flex;
+        border: 1px solid gray;
+        height: 37px;
+        margin-top: 24px;
+        border-radius: 3px;
+        margin-left: 2.5%;
+        background-color: #f7f7f7;
+      }
+      #headCart {
+        display: flex;
+        padding-left: 5px;
+        width: auto;
+        align-items: center;
+        font-size: 14px;
+      }
+      #headCart > div {
+        margin-left: 15px;
+        cursor: pointer;
+      }
+      .ima {
+        margin: 5px;
+        margin-bottom: 5px;
+      }
+      #cart {
+        width: 28px;
+      }
+      #belowNav {
+        margin: auto;
+        display: flex;
+        width: 1170px;
+        height: 51.3px;
+      }
+      #catag {
+        align-items: center;
+        display: flex;
+        font-size: 14px;
+        width: 798.3px;
+        justify-content: space-between;
+        padding-left: 15px;
+      }
+      #catag > div {
+        cursor: pointer;
+      }
+      #catag > div:hover {
+        color: #007aff;
+      }
+      #cataglast {
+        margin-right: 60px;
+      }
+      #navCont > div > div:hover {
+        color: #007aff;
+      }
+      #store {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        width: 224px;
+        font-weight: 600;
+        justify-content: space-between;
+        font-size: 14px;
+        padding-right: 32px;
+      }
+      #store > div {
+        padding: 5px;
+        background: #e3e3e3;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #myDIV {
+        display: none;
+      }
+      #myDIV {
+        background: #fff;
+        border: 1px solid transparent;
+        font-size: 12px;
+        text-align: left;
+        width: 160px;
+        margin-top: 10px;
+      }
+      #myDIV p {
+        padding: 10px;
+        font-weight: lighter;
+      }
+      #myDIV > p:hover {
+        color: #007aff;
+      }
+      #myDIV h1 {
+        padding: 10px;
+        font-weight: lighter;
+      }
+      .ic img {
+        width: 18px;
+      }
+      #accounts {
+        position: relative;
+      }
+      #dropTable {
+        display: none;
+      }
+      #dropTable {
+        right: 0;
+        width: 323px;
+        color: black;
+        text-align: center;
+        background-color: #fff;
+      }
+      #dropTable #sI,
+      #lO {
+        margin: auto;
+        width: 296px;
+        height: 50px;
+        margin-top: 9px;
+        margin-bottom: 9px;
+        line-height: 55px;
+        background: cadetblue;
+        border-radius: 4px;
+        color: white;
+      }
+      #dropTable #lO {
+        background: none;
+        color: black;
+        border: 1px solid black;
+      }
+      #insideDrop {
+        width: 296px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 13px;
+        grid-gap: 0;
+      }
+      #f1,
+      #f2 {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        font-size: 14px;
+        line-height: 32px;
+      }
+      #f1 > div:nth-child(1) {
+        color: #009393;
+      }
+      #f2 > div:nth-child(1) {
+        color: #009393;
+      }
+      #f1 > div:hover {
+        color: #007aff;
+      }
+      #f2 > div:hover {
+        color: #007aff;
+      }
+      #catogBestSeller {
+        position: absolute;
+        width: 350px;
+        height: 400px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 0;
+      }
+      #catogBestSeller {
+        display: none;
+      }
+      #sellerCat1 {
+        background: #f6f6f7;
+      }
+      #sellerCat1 > div {
+        line-height: 50px;
+        padding-left: 20px;
+      }
+      #forSport,
+      #forhealth {
+        background-color: lightcyan;
+        padding: 20px;
+        line-height: 30px;
+      }
+      #sNutri:hover {
+        background-color: white;
+      }
+      #hNutri:hover {
+        background-color: white;
+      }
+      #gend-DroDwn {
+        display: none;
+      }
+      #gend-DroDwn {
+        width: 265px;
+        height: 176px;
+        position: absolute;
+        background-color: #fff;
+      }
+      #gen_content {
+        width: 219px;
+        height: 145px;
+        margin: auto;
+        margin-top: 15px;
+      }
+      .gender_text {
+        color: #1d1d1d;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      #cat_menWomen {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-gap: 20px;
+      }
+      #cat_menWomen > div {
+        width: 100px;
+        height: 107px;
+        border: 0.5px solid gray;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 4px;
+      }
+      #div_cat_Men:hover {
+        border: 1px solid blue;
+        color: blueviolet;
+      }
+      #div_cat_Women:hover {
+        border: 1px solid blue;
+        color: blueviolet;
+      }
+      #hk {
+        background-color: #d8faf9 !important;
+      }
+      #hk:hover {
+        background-color: rgb(60, 187, 238) !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-Navbar">
+      <section>
+        <div id="navCont">
+          <div id="logo">
+            <svg
+              version="1.0"
+              xmlns="http://www.w3.org/2000/svg"
+              xlink="http://www.w3.org/1999/xlink"
+              a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+              x="0px"
+              y="0px"
+              viewBox="0 0 179.3 43.7"
+              enable-background="new 0 0 179.3 43.7"
+              space="preserve"
+            >
+              <polygon
+                fill="#00BFBF"
+                points="10.7,13.3 10.7,20.4 3,20.4 3,13.3 0,13.3 0,30.4 3,30.4 3,22.8 10.7,22.8 10.7,30.4 13.6,30.4
+                    13.6,13.3 "
+              ></polygon>
+              <polygon
+                fill="#00BFBF"
+                points="30.7,22.8 22.5,22.8 22.5,28 30.7,28 30.7,30.4 19.5,30.4 19.5,13.3 30.7,13.3 30.7,15.7 22.5,15.7
+                    22.5,20.4 30.7,20.4 "
+              ></polygon>
+              <path
+                fill="#00BFBF"
+                d="M45.6,26.4H39l-1.4,4h-3.1L41,13.3h2.7l6.5,17.2H47L45.6,26.4z M39.8,24h5l-2.5-7.1L39.8,24z"
+              ></path>
+              <polygon
+                fill="#00BFBF"
+                points="56.2,28 64,28 64,30.4 53.2,30.4 53.2,13.3 56.2,13.3 "
+              ></polygon>
+              <polygon
+                fill="#00BFBF"
+                points="79.2,15.7 73.8,15.7 73.8,30.4 70.9,30.4 70.9,15.7 65.6,15.7 65.6,13.3 79.2,13.3 "
+              ></polygon>
+              <path
+                fill="#00BFBF"
+                d="M98.1,20.4v-7.1h3v17.2h-3v-7.6h-7.7v7.6h-3V13.3h3v7.1H98.1z M110.6,19.3l5-6h3.6l-6.4,7.6l6.7,9.6H116
+                    l-5.2-7.4l-1.9,2.1v5.3h-3V13.3h3v8L110.6,19.3z M82.6,42.7h41.7V1H82.6V42.7z"
+              ></path>
+              <path
+                fill="#00BFBF"
+                d="M138.3,26.4h-6.6l-1.4,4h-3.1l6.5-17.2h2.7l6.5,17.2h-3.1L138.3,26.4z M132.5,24h5l-2.5-7.1L132.5,24z"
+              ></path>
+              <g>
+                <path
+                  fill="#00BFBF"
+                  d="M153.1,23.8h-3.3v6.6h-3V13.3h6c1,0,1.9,0.1,2.6,0.3c0.8,0.2,1.4,0.6,2,1c0.5,0.4,0.9,1,1.2,1.6
+                    c0.3,0.6,0.4,1.4,0.4,2.2c0,1.1-0.3,2.1-0.8,2.9c-0.6,0.8-1.3,1.4-2.3,1.8l3.9,7.2v0.2h-3.2L153.1,23.8z M149.8,21.4h3.1
+                    c0.5,0,1-0.1,1.4-0.2c0.4-0.1,0.7-0.3,1-0.6c0.3-0.3,0.5-0.5,0.6-0.9c0.1-0.3,0.2-0.7,0.2-1.1c0-0.4-0.1-0.8-0.2-1.2
+                    c-0.1-0.4-0.3-0.7-0.6-0.9c-0.3-0.3-0.6-0.5-1-0.6c-0.4-0.1-0.9-0.2-1.5-0.2h-3.1V21.4z"
+                ></path>
+                <polygon
+                  fill="#00BFBF"
+                  points="176,15.7 170.7,15.7 170.7,30.4 167.7,30.4 167.7,15.7 162.4,15.7 162.4,13.3 176,13.3 "
+                ></polygon>
+              </g>
+            </svg>
+          </div>
+          <div id="searchCont">
+            <img
+              class="glass"
+              src="https://static1.hkrtcdn.com/hknext/static/media/common/header/search-icon-grey-2.svg"
+            />
+            <input
+              id="search"
+              type="text"
+              placeholder="Search for products, brands or Health Goals"
+            />
+          </div>
+          <div id="headCart">
+            <div>Loyal Rewards <span class="ima">&nbsp;|</span></div>
+            <div>
+              Customer Support
+              <span class="ima"
+                ><img
+                  src="https://static1.hkrtcdn.com/hknext/static/media/common/header/arrow-down.svg"
+                  alt=""
+                />&nbsp;|</span
+              >
+            </div>
+            <div id="accounts">
+              My Account & Orders
+              <span class="ima"
+                ><img
+                  src="https://static1.hkrtcdn.com/hknext/static/media/common/header/arrow-down.svg"
+                  alt=""
+                />&nbsp;|</span
+              >
+              <div id="dropTable">
+                <div id="sI">LogIn</div>
+                <div id="lO">New user? / Sign up</div>
+                <div id="insideDrop">
+                  <div id="f1">
+                    <div>My Account</div>
+                    <div>
+                      <span
+                        ><img
+                          src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-orders.svg"
+                          alt=""
+                          srcset="" /></span
+                      >&nbsp; Orders
+                    </div>
+                    <div>
+                      <span
+                        ><img
+                          src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-wishlist.svg"
+                          alt=""
+                          srcset="" /></span
+                      >&nbsp; Witch List
+                    </div>
+                    <div>
+                      <span
+                        ><img
+                          src="https://static1.hkrtcdn.com/hknext/static/media/common/header/loyalty-rewards.svg"
+                          alt=""
+                          srcset="" /></span
+                      >&nbsp; Loyal Rewards
+                    </div>
+                  </div>
+                  <div id="f2">
+                    <div>Health Profile</div>
+                    <div>&nbsp; Diet Plan</div>
+                    <div>&nbsp; My Consultants</div>
+                    <div>&nbsp; Recommended Products</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="cart">
+              <img
+                src="https://static1.hkrtcdn.com/hknext/static/media/common/header/cart.svg"
+                alt="cart"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <div id="belowNav">
+          <div id="catag">
+            <div id="catagfirst">Category</div>
+            <div>Brand</div>
+            <div id="genderSec">
+              Gender
+              <div id="gend-DroDwn">
+                <div id="gen_content">
+                  <div class="gender_text">Shop By Gender</div>
+                  <div id="cat_menWomen">
+                    <div id="div_cat_Men">
+                      <img
+                        src="https://static1.hkrtcdn.com/hknext/static/media/common/header/man-2.svg"
+                        alt=""
+                        srcset=""
+                      />
+                      <div>MEN</div>
+                    </div>
+                    <div id="div_cat_Women">
+                      <img
+                        src="https://static1.hkrtcdn.com/hknext/static/media/common/header/woman-2.svg"
+                        alt=""
+                        srcset=""
+                      />
+                      <div>WOMEN</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>Goal</div>
+            <div id="bestSells">
+              Bestsellers
+              <div id="catogBestSeller">
+                <div id="sellerCat1">
+                  <div id="sNutri">Sport Nutrition</div>
+                  <div id="hNutri">Health Nutrition</div>
+                </div>
+                <div id="sellerCat2">
+                  <div id="forSport">
+                    <div>Protein Powder</div>
+                    <div>Masss Gainer</div>
+                    <div>Whey Protein</div>
+                    <div>Health Booster</div>
+                  </div>
+                  <div id="forhealth">
+                    <div>Protein A</div>
+                    <div>Mas B</div>
+                    <div>Protein C</div>
+                    <div>Health Booster G</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>Deals</div>
+            <div>Gift Card</div>
+            <div id="cataglast">Blog,Video & More</div>
+          </div>
+          <div id="store">
+            <div id="hk">
+              <img
+                src="https://static1.hkrtcdn.com/hknext/static/media/common/header/hk-consult.svg"
+                alt=""
+                srcset=""
+              />
+              <span id="cons">&nbsp;HK Consult</span>
+              <div id="myDIV">
+                <h1>Consult Services</h1>
+                <p>
+                  <span class="ic"
+                    ><img
+                      src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg"
+                      alt="" /></span
+                  >&nbsp;&nbsp;Health Profile
+                </p>
+                <p>
+                  <span class="ic"
+                    ><img
+                      src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/book-consultation-icon.svg"
+                      alt="" /></span
+                  >&nbsp;&nbsp;Book a Consultation
+                </p>
+                <p>
+                  <span class="ic"
+                    ><img
+                      src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg"
+                      alt="" /></span
+                  >&nbsp;&nbsp;Recommend a Product
+                </p>
+                <p>
+                  <span class="ic"
+                    ><img
+                      src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/what-we-offer-icon.svg"
+                      alt="" /></span
+                  >&nbsp;&nbsp;Service Programs
+                </p>
+                <p>
+                  <span class="ic"
+                    ><img
+                      src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg"
+                      alt="" /></span
+                  >&nbsp;&nbsp;Workout at Home
+                </p>
+              </div>
+            </div>
+            <div id="st_store">
+              <img
+                src="https://static1.hkrtcdn.com/hknext/static/media/common/header/location-pin.svg"
+                alt=""
+                srcset=""
+              />&nbsp;Find a Store
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+    </div>
+    <div class="slider-Box">
+      <div id="slider">
+        <img src="https://img1.hkrtcdn.com/16571/bnr_1657000_o.jpg" alt="" />
+        <img src="https://img6.hkrtcdn.com/15281/bnr_1528075_o.jpg" alt="" />
+        <img src="https://img4.hkrtcdn.com/14094/bnr_1409333_o.jpg" alt="" />
+        <img src="https://img6.hkrtcdn.com/14094/bnr_1409335_o.jpg" alt="" />
+      </div>
+      <div class="indicators">
+        <span id="btn1"></span>
+        <span id="btn2"></span>
+        <span id="btn3"></span>
+        <span id="btn4"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="topCatogCont">
+        <div class="textCont">
+          <div class="title">One Stop Health Shop</div>
+          <div class="paratit">
+            Find all the right plans and products to manage your concerns with
+            personalized consultations. Don't copy, get educated.
+          </div>
+        </div>
+        <div class="imageCont">
+          <div class="content">
+            <img
+              src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="content">
+            <img
+              src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="content">
+            <img
+              src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="content">
+            <img
+              src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="why-item-container">
+        <div class="whyItem">
+          <div>
+            <img
+              src="https://img6.hkrtcdn.com/13808/normal_1380705_o.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="whyItemtextContent">
+            <div class="para1WhyItem">Products Curated Just For Women</div>
+            <div class="para2WhyItem">
+              We know your needs, lifestyle and responsibilities differ. We can
+              help you find the right product
+            </div>
+          </div>
+        </div>
+        <div class="whyItem">
+          <div>
+            <img
+              src="https://img8.hkrtcdn.com/13808/normal_1380707_o.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="whyItemtextContent">
+            <div class="para1WhyItem">Personalised Guidance</div>
+            <div class="para2WhyItem">
+              Know what's right for you. Speak to your assigned female
+              nutritionist any time before or after purchasing product
+            </div>
+          </div>
+        </div>
+        <div class="whyItem">
+          <div>
+            <img
+              src="https://img10.hkrtcdn.com/13808/normal_1380709_o.png"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="whyItemtextContent">
+            <div class="para1WhyItem">Authenticity</div>
+            <div class="para2WhyItem">
+              Information about women's health is cluttered and contradictory.
+              We want you to be equipped with all information before you
+              purchase
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spotlightContainer">
+      <div class="spotlightPara">SpotLight</div>
+      <div id="proDesc">
+        <div>
+          <div class="imageOfPro">
+            <img src="https://img1.hkrtcdn.com/16794/prd_1679330_c_s.jpg" />
+          </div>
+          <div class="title">
+            HealthKart HK Vitals Multivitamin with Multimineral, Amino Acids,
+            Taurine &amp; Ginseng Extract, 60 tablet(s) Unflavoured
+          </div>
+          <div class="reviewStars">Rating: 4.5</div>
+          <div class="price">₹1899</div>
+        </div>
+        <div>
+          <div class="imageOfPro">
+            <img src="https://img1.hkrtcdn.com/16794/prd_1679330_c_s.jpg" />
+          </div>
+          <div class="title">
+            HealthKart Apple Cider Vinegar with Mother, 0.5 L Ginger, Garlic,
+            Lemon &amp; Honey
+          </div>
+          <div class="reviewStars">Rating: 4.5</div>
+          <div class="price">₹1899</div>
+        </div>
+        <div>
+          <div class="imageOfPro">
+            <img src="https://img1.hkrtcdn.com/16794/prd_1679330_c_s.jpg" />
+          </div>
+          <div class="title">HealthKart Easy Haldi, 100 g</div>
+          <div class="reviewStars">Rating: 4.5</div>
+          <div class="price">₹1899</div>
+        </div>
+        <div>
+          <div class="imageOfPro">
+            <img src="https://img1.hkrtcdn.com/16794/prd_1679330_c_s.jpg" />
+          </div>
+          <div class="title">Isopure Low Carb, 1 lb Dutch Chocolate</div>
+          <div class="reviewStars">Rating: 4.5</div>
+          <div class="price">₹1899</div>
+        </div>
+      </div>
+    </div>
+    <div class="spotlightContainer">
+      <div class="spotlightPara">Shop By Categories</div>
+      <div id="proCatog">
+        <div>
+          <img
+            src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+            alt=""
+            srcset=""
+          />
+          <div class="prod-name">Weight Loss Range</div>
+        </div>
+        <div>
+          <img
+            src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+            alt=""
+            srcset=""
+          />
+          <div class="prod-name">PCOS Range</div>
+        </div>
+        <div>
+          <img
+            src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+            alt=""
+            srcset=""
+          />
+          <div class="prod-name">Hair Fall Range</div>
+        </div>
+        <div>
+          <img
+            src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+            alt=""
+            srcset=""
+          />
+          <div class="prod-name">PMS Range</div>
+        </div>
+      </div>
+
+      <div id="healthPlans">
+        <div class="healthHeading">
+          <h1>Health Plans</h1>
+          <button>View All Plans</button>
+        </div>
+        <div class="productsHeal">
+          <div>
+            <img
+              src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+              alt=""
+              srcset=""
+            />
+            <h4>1 month</h4>
+            <h3>HK Women Weight Loss Plan, 1 month</h3>
+            <h4>₹299</h4>
+          </div>
+          <div>
+            <img
+              src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+              alt=""
+              srcset=""
+            />
+            <h4>3 month</h4>
+            <h3>HK Women PCOS/PCOD Management Plan, 3 months</h3>
+            <h4>₹699</h4>
+          </div>
+        </div>
+      </div>
+      <div id="healthPlansTWO">
+        <div class="healthHeading">
+          <h1>Health Plans</h1>
+        </div>
+        <div class="productsHeal">
+          <div>
+            <img
+              src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+              alt=""
+              srcset=""
+            />
+            <h4>1 month</h4>
+            <h3>HK Women Weight Loss Plan, 1 month</h3>
+            <h4>₹299</h4>
+          </div>
+          <div>
+            <img
+              src="https://img8.hkrtcdn.com/14119/bnr_1411877_o.png"
+              alt=""
+              srcset=""
+            />
+            <h4>3 month</h4>
+            <h3>HK Women PCOS/PCOD Management Plan, 3 months</h3>
+            <h4>₹699</h4>
+          </div>
+        </div>
+      </div>
+      <div id="fAQ">
+        <div id="faq-wrapper">
+          <div class="faq-title">FAQs</div>
+          <div class="faq-content">
+            <div>
+              <div class="heading">
+                Is it safe to take protein supplements for weight loss?
+              </div>
+              <div class="descrip">
+                Hey! Protein is an essential aspect of your weight loss routine,
+                and a balanced intake to fulfill the deficiency in your diet can
+                do wonders. We offer a variety of protein supplements, both
+                powdered and through tablets. As long as you regulate the
+                quantity of your total protein intake to the required levels,
+                protein supplements are entirely harmless. Follow the guidelines
+                that come with the product, and you'll observe beneficial
+                results. I hope this helps!
+              </div>
+            </div>
+            <div>
+              <div class="heading">
+                Are there any side effects to your biotin supplements?
+              </div>
+              <div class="descrip">
+                Hey! All our biotin products are manufactured after thorough
+                research and testing, and there are absolutely no significant
+                side effects to them. Vitamin B7 (Biotin) is water-soluble, so
+                when our powdered supplement is mixed with water, whatever extra
+                content of biotin is present gets peed out. This way, it's
+                almost impossible to have any side effects with biotin. Kindly
+                follow all the instructions that come with the product, and
+                you'll observe healthy hair growth and transition. I hope this
+                helps!
+              </div>
+            </div>
+            <div>
+              <div class="heading">
+                What other non-protein-based products do you offer for weight
+                loss?
+              </div>
+              <div class="descrip">
+                Hey! We offer various products, like chia seeds, supplements
+                like Green Coffee Bean Extracts, herbs, energy drinks, keto
+                burners, etc., that meet your requirements. Kindly browse our
+                website, and it'll guide you to what you need. I hope this
+                helps!
+              </div>
+            </div>
+            <div>
+              <div class="heading">
+                Omega-3 is a variant of fatty acids, right? So aren
+              </div>
+              <div class="descrip">
+                Hey! Omega-3 is one of the rare groups of fatty acids that your
+                body doesn't want to miss out on. It's one of the 'good fats'
+                that your body needs. On the contrary, they help in aiding
+                weight loss. A balanced intake of these fatty acids can
+                contribute to helping with anxiety and depression. It also helps
+                in maintaining good eye health. These are just a few of the
+                countless benefits of Omega-3. I hope this helps!
+              </div>
+            </div>
+            <div>
+              <div class="heading">
+                How does Chromium Picolinate help in the case of PCOS?
+              </div>
+              <div class="descrip">
+                Hey! Chromium Picolinate supports healthy blood glucose levels,
+                helps in the utilization of carbohydrates, fats & proteins, and
+                supports weight loss. I hope this helps!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="main"></div>
+    </div>
+  </body>
+</html>
+<script>
+  var i = 0;
+  let slide = document.getElementById("slider");
+  let btn1 = document.getElementById("btn1");
+  let btn2 = document.getElementById("btn2");
+  let btn3 = document.getElementById("btn3");
+  let btn4 = document.getElementById("btn4");
+
+  let interval = setInterval(translate, 3000);
+  let arr = ["0px", "-100%", "-200%", "-300%"];
+  function translate() {
+    if (i == 4) {
+      clearInterval(interval);
+    }
+    slide.style.transform = `translateX(${arr[i]})`;
+    i++;
+  }
+  btn1.onclick = () => {
+    slide.style.transform = "translateX(0px)";
+  };
+  btn2.onclick = () => {
+    slide.style.transform = "translateX(-100%)";
+  };
+  btn3.onclick = () => {
+    slide.style.transform = "translateX(-200%)";
+  };
+  btn4.onclick = () => {
+    slide.style.transform = "translateX(-300%)";
+  };
+  function onMouseIn(hCons, myDIV) {
+    hCons.onmouseover = () => {
+      addDropDwn(myDIV);
+    };
+  }
+  function onMouserOut(hCons, myDIV) {
+    hCons.onmouseleave = () => {
+      removeDropDwn(myDIV);
+    };
+  }
+  function addDropDwn(x) {
+    if (x.style.display === "none") {
+      x.style.display = "grid";
+      x.style.position = "absolute";
+      x.style.zIndex = "1";
+    }
+  }
+  function removeDropDwn(x) {
+    x.style.display = "none";
+  }
+
+  function addDropDwn1(mO, x, array) {
+    mO.onmouseover = () => {
+      array.forEach((ele) => {
+        ele.style.display = "none";
+      });
+      if (x.style.display === "none") {
+        x.style.display = "grid";
+        x.style.position = "absolute";
+        x.style.backgroundColor = "white";
+        x.style.zIndex = "1";
+      }
+    };
+  }
+  function getElement(id) {
+    return document.getElementById(id);
+  }
+
+  function makeArr(array) {
+    let arr = [];
+    for (let i = 0; i < array.length; i++) {
+      arr.push(document.getElementById(array[i]));
+    }
+    return arr;
+  }
+  function makeNavbar() {
+    let hCons = getElement("hk");
+    let myDIV = getElement("myDIV");
+    onMouseIn(hCons, myDIV);
+    onMouserOut(hCons, myDIV);
+
+    let bestSeller = getElement("bestSells");
+    let catBestSell = getElement("catogBestSeller");
+    onMouseIn(bestSeller, catBestSell);
+    onMouserOut(bestSeller, catBestSell);
+    let sNutri = getElement("sNutri");
+    let hNutri = getElement("hNutri");
+    let ar = makeArr(["forSport", "forhealth"]);
+    addDropDwn1(sNutri, ar[0], ar);
+    addDropDwn1(hNutri, ar[1], ar);
+
+    let accounts = getElement("accounts");
+    let dT = getElement("dropTable");
+    onMouseIn(accounts, dT);
+    onMouserOut(accounts, dT);
+
+    let genderSec = document.getElementById("genderSec");
+    genderSec.onmouseover = () => {
+      let gendDroDwn = document.getElementById("gend-DroDwn");
+      gendDroDwn.style.display = "grid";
+      gendDroDwn.style.zIndex = "1";
+    };
+    genderSec.onmouseleave = () => {
+      let gendDroDwn = document.getElementById("gend-DroDwn");
+      gendDroDwn.style.display = "none";
+    };
+    let Crt = document.getElementById("cart");
+    Crt.onclick = () => {
+      window.location.href = "cart";
+    };
+
+    let div_cat_Men = document.getElementById("div_cat_Men");
+    let div_cat_Women = document.getElementById("div_cat_Women");
+    div_cat_Men.onclick = () => {
+      window.location.href = "men";
+    };
+    div_cat_Women.onclick = () => {
+      window.location.href = "women";
+    };
+
+    let healthLogo = document.getElementById("logo");
+    healthLogo.onclick = () => {
+      window.location.href = ".";
+    };
+
+    const sign = document.getElementById("sI");
+    sign.onclick = () => {
+      window.location.href = "login";
+    };
+    const signUp = document.getElementById("lO");
+    signUp.onclick = () => {
+      window.location.href = "signup";
+    };
+    const catigg = document.getElementById("catagfirst");
+    catigg.onclick = () => {
+      window.location.href = "products";
+    };
+  }
+  makeNavbar();
+</script>

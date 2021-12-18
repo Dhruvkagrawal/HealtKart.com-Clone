@@ -1,0 +1,36 @@
+{
+  "name": "healtkart.com-clone",
+  "version": "1.0.0",
+  "description": "This is an try to clone the website named HealtKart.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhruvkagrawal/HealtKart.com-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dhruvkagrawal/HealtKart.com-Clone/issues"
+  },
+  "homepage": "https://github.com/Dhruvkagrawal/HealtKart.com-Clone#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-validator": "^6.14.0",
+    "mongoose": "^6.1.2",
+    "otp-generator": "^4.0.0",
+    "passport": "^0.5.2",
+    "passport-google-oauth2": "^0.2.0",
+    "twilio": "^3.72.0",
+    "uuidv4": "^6.2.12",
+    "xhr2": "^0.2.1"
+  }
+}
