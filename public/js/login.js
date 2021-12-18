@@ -59,7 +59,7 @@ let a=document.getElementById("cross");
     let tab=document.getElementById("tab-1");
     tab.addEventListener("click",openlogin);
     function openlogin(){
-        window.location.href="login.ejs"
+        window.location.href="login"
     }
     let tab1=document.getElementById("tab-2");
     tab1.addEventListener("click",opensignup);
