@@ -187,7 +187,7 @@ a{
     height: 430px;
     border-radius: 5px;
     padding: 1%;
-  /*  display: none;*/
+   display: none;
 }
 
 .inner2_1_f:hover {
@@ -1076,7 +1076,7 @@ p {
                <div class="inner2_1_3_4_1_f"><%=product.price %>  </div>
                <button id="inner2_1_3_4_2_f"   class="add_to_cart_btn" style="display: flex;">
                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                   <div>ADD</div>
+                   <div onclick="addtoCart('<%=JSON.stringify(product)%>')">ADD</div>
                </button>
            </div>
            <div class="inner2_1_3_5_f">
@@ -1132,7 +1132,7 @@ p {
                    <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
                    <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
                          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                         <div> ADD </div>
+                         <div onclick="addtoCart('<%=JSON.stringify(product)%>')"> ADD </div>
                    </button>
               </div>
               <div class="inner2_1_3_5_f">
@@ -1257,7 +1257,7 @@ p {
                           <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
                           <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
                                 <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                                <div>ADD</div>
+                                <div onclick="addtoCart('<%=JSON.stringify(product)%>')">ADD</div>
                           </button>
                      </div>
                      <div class="inner2_1_3_5_f">
@@ -1339,7 +1339,7 @@ p {
                                    <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
                                    <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
                                          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                                         <div>ADD</div>
+                                         <div onclick="addtoCart('<%=JSON.stringify(product)%>')">ADD</div>
                                    </button>
                               </div>
                               <div class="inner2_1_3_5_f">
@@ -1423,7 +1423,7 @@ p {
                                    <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
                                    <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
                                          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                                         <div>ADD</div>
+                                         <div onclick="addtoCart('<%=JSON.stringify(product)%>')">ADD</div>
                                    </button>
                               </div>
                               <div class="inner2_1_3_5_f">
@@ -1506,7 +1506,7 @@ p {
                                    <div class="inner2_1_3_4_1_f"> <%= product.price %> </div>
                                    <button id="inner2_1_3_4_2_f" class="add_to_cart_btn" style="display: flex;">
                                          <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                                         <div>ADD</div>
+                                         <div onclick="addtoCart('<%=JSON.stringify(product)%>')">ADD</div>
                                    </button>
                               </div>
                               <div class="inner2_1_3_5_f">
@@ -2080,8 +2080,196 @@ trendingLeftBtn_popular_in_fitness.onclick = function () {
     import {footer} from './components/footer.js'
     let main = document.getElementById('main')
     main.innerHTML = footer();
+////////////////////////////  just launched /////////
+</script>
 
-//////////////// trending now ////////////////
+<script type="module">
+  /*  var prodDesc = document.getElementById('proDesc');
+    import { appendProductForMen, appendBackground, addScripts } from '../public/js/index.js'
+
+    addScripts()
+
+    import { startSlide } from '../public/js/index.js'
+    let slide = document.getElementById('slide')
+
+    slide.innerHTML = startSlide()
+// console.log(object);
+
+*/
+
+</script>
+
+
+
+<script>
+    let nav_div = document.getElementById("header-Navbar");
+
+function onMouseIn(hCons, myDIV){
+hCons.onmouseover = ()=> 
+{
+   addDropDwn(myDIV)
+}
+}
+function onMouserOut(hCons, myDIV){
+hCons.onmouseleave = ()=> 
+{
+   removeDropDwn(myDIV)
+}
+}
+function addDropDwn(x) {
+ 
+if (x.style.display === "none") {
+ x.style.display = "grid";
+ x.style.position ='absolute'
+ x.style.zIndex = '1'
+}
+}
+function removeDropDwn(x){
+ x.style.display = "none";
+}
+
+function addDropDwn1(mO,x ,array) {
+   mO.onmouseover =()=> {
+       array.forEach((ele)=>{
+            ele.style.display = "none"
+     });
+   if (x.style.display === "none") {
+     x.style.display = "grid";
+     x.style.position ='absolute';
+     x.style.backgroundColor = 'white'
+     x.style.zIndex = '1'
+   }
+  }
+ }
+ function getElement(id)
+ {
+     return document.getElementById(id);
+ }
+
+   function makeArr(array){
+       let arr = []
+       for(let i=0; i< array.length; i++)
+       {
+           arr.push(document.getElementById(array[i]))
+       }
+       return arr;
+   }
+   function makeNavbar(){
+       let hCons = getElement('hk');
+       let myDIV = getElement('myDIV');
+       onMouseIn(hCons,myDIV)
+       onMouserOut(hCons,myDIV)
+   
+     let bestSeller = getElement('bestSells');
+     let catBestSell = getElement('catogBestSeller')
+      onMouseIn(bestSeller,catBestSell)
+      onMouserOut(bestSeller, catBestSell)
+     let sNutri = getElement('sNutri')
+     let hNutri = getElement('hNutri')
+     let ar = makeArr(['forSport','forhealth'])
+     addDropDwn1(sNutri,ar[0],ar)
+     addDropDwn1(hNutri,ar[1],ar)
+     
+     let accounts = getElement('accounts')
+     let dT = getElement('dropTable')
+     onMouseIn(accounts,dT)
+     onMouserOut(accounts,dT)
+
+     let genderSec = document.getElementById('genderSec');
+genderSec.onmouseover = ()=>{
+  let gendDroDwn = document.getElementById('gend-DroDwn')
+  gendDroDwn.style.display = 'grid'
+  gendDroDwn.style.zIndex = '1'
+}
+genderSec.onmouseleave = ()=>{
+  let gendDroDwn = document.getElementById('gend-DroDwn')
+  gendDroDwn.style.display = 'none'
+}
+let Crt = document.getElementById('cart');
+Crt.onclick = ()=>{
+window.location.href = 'cart'
+}
+
+div_cat_Men.onclick = ()=>{
+
+window.location.href = 'men'
+}
+div_cat_Women.onclick = ()=>{
+
+window.location.href = 'women'
+}
+
+let healthLogo = document.getElementById('logo');
+healthLogo.onclick= ()=>
+{
+window.location.href = 'http://localhost:2345/flashsale'
+}
+
+const sign = document.getElementById('sI')
+sign.onclick = ()=>{
+window.location.href = 'http://localhost:2345/login'
+}
+const signUp = document.getElementById('lO')
+signUp.onclick = ()=>{
+window.location.href = 'http://localhost:2345/signup'
+}
+const catigg = document.getElementById('catagfirst');
+catigg.onclick= ()=>{
+window.location.href = 'http://localhost:2345/category'
+}
+}
+makeNavbar();
+
+
+
+///////   add_to_cart  function ///////////////
+
+function addtoCart(product) {
+    alert("product added")
+    product = JSON.parse(product);
+    console.log(product)
+    span = document.getElementById(product._id)
+    span.textContent = ""
+    span.textContent = 'CART->'
+    span.onclick =()=>{
+        window.location.href = "http://localhost:2345/flashsale/cart"
+    }
+    if (localStorage.getItem("healthkart_cart") === null) {
+        localStorage.setItem("healthkart_cart", JSON.stringify([]));
+    }
+    let array = JSON.parse(localStorage.getItem("healthkart_cart"));
+    let present  = false;
+
+      array.forEach((pro)=>{
+        if(pro.name == product.name)
+        {  
+            pro["quantity"]++;
+            present = true;
+        }
+     })
+   if(present)
+   {
+    localStorage.setItem("healthkart_cart", JSON.stringify(array));
+   }else{
+      product["quantity"] = 1;
+      array.push(product);
+      localStorage.setItem("healthkart_cart", JSON.stringify(array));
+   }
+}
+
+      ///////   add_to_cart  function ///////////////
+      
+      ///// product page /////////
+      
+      function productPage(){
+          window.location.href = 'category'
+      }
+      
+      /// product page //////////
+      
+</script>
+<script>
+    //////////////// trending now ////////////////
 
 
 //  slide script for multiple products
@@ -2395,30 +2583,20 @@ trendingLeftBtn_just_Lanch.onclick = function () {
     }
 }
 
-
-
-////////////////////////////  just launched /////////
+let cartLogo = document.getElementById('cart');
+cartLogo.onclick = ()=>{
+    window.location.href = "http://localhost:2345/flashsale/cart"
+}
+let catagfirst = document.getElementById('catagfirst');
+catagfirst.onclick = ()=>{
+    window.location.href = "http://localhost:2345/flashsale/category"
+}
+let div_cat_Men = document.getElementById('div_cat_Men');
+div_cat_Men.onclick = ()=>{
+    window.location.href = "http://localhost:2345/flashsale/men"
+}
+let div_cat_women = document.getElementById('div_cat_Women');
+div_cat_women.onclick = ()=>{
+    window.location.href = "http://localhost:2345/flashsale/women"
+}
 </script>
-
-<script type="module">
-  /*  var prodDesc = document.getElementById('proDesc');
-    import { appendProductForMen, appendBackground, addScripts } from '../public/js/index.js'
-
-    addScripts()
-
-    import { startSlide } from '../public/js/index.js'
-    let slide = document.getElementById('slide')
-
-    slide.innerHTML = startSlide()
-// console.log(object);
-
-*/
-
-</script>
-
-
-
-<script src="../public/js/index2.js">
-
-</script>
-

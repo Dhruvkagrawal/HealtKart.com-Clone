@@ -1,10 +1,7 @@
 const connect = require("./configs/db");
 const app = require(".");
 
-const PORT = 3000;
-
-
-
+const PORT = 2345;
 
 const start = (PORT) => {
   app.listen(PORT, async () => {

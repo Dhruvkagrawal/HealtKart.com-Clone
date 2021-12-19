@@ -2,6 +2,7 @@ require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const User = require("../models/user.model");
 
+
 const newToken = (user) => {
   return jwt.sign({ user: user }, process.env.JWT_ACCESS_KEY);
 };
@@ -45,7 +46,7 @@ const login = async (req, res) => {
       });
 
     const token = newToken(user);
- 
+  // localStorage.setItem('userToken', JSON.stringify(token))
     res.status(201).json({ user, token });
   } catch (e) {
     return res.status(500).json({ status: "failed", message: e.message });

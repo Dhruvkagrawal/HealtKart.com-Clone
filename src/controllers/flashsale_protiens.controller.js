@@ -4,7 +4,19 @@ const router = express.Router()
 const TrendingNow_protiens = require("../models/trendingNow_protiens.model")
 const Popular_in_weights = require("../models/popular_in_weights.model")
 const navbar = require('../components/navbar')
+const CART = require("../models/cart.model")
+const authenticate = require("../middlewares/authenticate")
+
 const path = require('path');
+router.get("/getTrend", async (req,res)=>{
+    try{
+         const trendingNow_protiens = await TrendingNow_protiens.find().lean().exec()
+        
+        return res.json(trendingNow_protiens)
+    }catch(e){
+        return res.status(500).send({message :e.message , status:"failed"})
+    }
+})
 router.post("/", async(req,res)=>{
     
     try{
@@ -73,12 +85,28 @@ router.get("/men", async (req,res)=>{
         return res.status(500).send({message :e.message , status:"failed"})
     }
 })
-router.get("/men/products", async (req,res)=>{
+// router.get("/men/products", async (req,res)=>{
+//     try{
+       
+//         const flashsale_protiens = await Flashsale_protiens.find().lean().exec()
+//         const trendingNow_protiens = await TrendingNow_protiens.find().lean().exec()
+//         return res.json({
+//             flashsale_protiens : flashsale_protiens ,
+//             trendingNow_protiens : trendingNow_protiens,
+//         })
+//     }catch(e){
+//         return res.status(500).send({message :e.message , status:"failed"})
+//     }
+// })
+
+
+
+router.get("/category", async (req,res)=>{
     try{
        
         const flashsale_protiens = await Flashsale_protiens.find().lean().exec()
         const trendingNow_protiens = await TrendingNow_protiens.find().lean().exec()
-        return res.json({
+        return res.render("product",{
             flashsale_protiens : flashsale_protiens ,
             trendingNow_protiens : trendingNow_protiens,
         })
@@ -86,7 +114,26 @@ router.get("/men/products", async (req,res)=>{
         return res.status(500).send({message :e.message , status:"failed"})
     }
 })
-
+router.get("/cartUser",authenticate, async (req,res)=>{
+    try{
+        const userId=  req.user.user._id;
+        const cartProducts = await CART.find({user:userId}).lean().exec()
+      
+        return res.json(cartProducts)
+    }catch(e){
+        return res.status(500).send({message :e.message , status:"failed"})
+    }
+})
+router.get("/cart", async (req,res)=>{
+    try{
+        // const userId=  req.user.user._id;
+        // const cartProducts = await CART.find().lean().exec()
+      
+        return res.render("cart")
+    }catch(e){
+        return res.status(500).send({message :e.message , status:"failed"})
+    }
+})
  /*
  router.get("/:id", async (req,res)=>{
      try{

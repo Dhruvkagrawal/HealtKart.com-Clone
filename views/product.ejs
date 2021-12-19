@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+#navCont {
+    display: flex;
+    margin: auto;
+    width: 1170px;
+    height: 87.5px;
+}
+
+#logo {
+    width: 197px;
+    height: 49px;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+#search {
+    width: 360px;
+    border: none;
+    margin-left: 10px;
+    background-color: #f7f7f7;
+}
+
+.glass {
+    margin-left: 10px;
+    width: 20px;
+}
+
+#searchCont {
+    display: flex;
+    border: 1px solid gray;
+    height: 37px;
+    margin-top: 24px;
+    border-radius: 3px;
+    margin-left: 2.5%;
+    background-color: #f7f7f7;
+}
+
+#headCart {
+    display: flex;
+    padding-left: 5px;
+    width: auto;
+    align-items: center;
+    font-size: 14px;
+}
+
+#headCart>div {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.ima {
+    margin: 5px;
+    margin-bottom: 5px;
+}
+
+#cart {
+    width: 28px;
+}
+
+#belowNav {
+    margin: auto;
+    display: flex;
+    width: 1170px;
+    height: 51.3px;
+}
+
+#catag {
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    width: 798.3px;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+#catag>div {
+    cursor: pointer;
+}
+
+#catag>div:hover {
+    color: #007aff;
+}
+
+#cataglast {
+    margin-right: 60px;
+}
+
+#navCont>div>div:hover {
+    color: #007aff;
+}
+
+#store {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    width: 224px;
+    font-weight: 600;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-right: 32px;
+}
+
+#store>div {
+    padding: 5px;
+    background: #e3e3e3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#myDIV {
+    display: none;
+}
+
+#myDIV {
+    background: #fff;
+    border: 1px solid transparent;
+    font-size: 12px;
+    text-align: left;
+    width: 160px;
+    margin-top: 10px;
+}
+
+#myDIV p {
+    padding: 10px;
+    font-weight: lighter;
+}
+
+#myDIV>p:hover {
+    color: #007aff;
+}
+
+#myDIV h1 {
+    padding: 10px;
+    font-weight: lighter;
+}
+
+.ic img {
+    width: 18px;
+}
+
+#accounts {
+    position: relative;
+}
+
+#dropTable {
+    display: none;
+}
+
+#dropTable {
+    right: 0;
+    width: 323px;
+    color: black;
+    text-align: center;
+    background-color: #fff;
+}
+
+#dropTable #sI, #lO {
+    margin: auto;
+    width: 296px;
+    height: 50px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    line-height: 55px;
+    background: cadetblue;
+    border-radius: 4px;
+    color: white;
+}
+
+#dropTable #lO {
+    background: none;
+    color: black;
+    border: 1px solid black;
+}
+
+#insideDrop {
+    width: 296px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 13px;
+    grid-gap: 0;
+}
+
+#f1, #f2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+#f1>div:nth-child(1) {
+    color: #009393;
+}
+
+#f2>div:nth-child(1) {
+    color: #009393;
+}
+
+#f1>div:hover {
+    color: #007aff;
+}
+
+#f2>div:hover {
+    color: #007aff;
+}
+
+#catogBestSeller {
+    position: absolute;
+    width: 350px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0;
+}
+
+#catogBestSeller {
+    display: none;
+}
+
+#sellerCat1 {
+    background: #f6f6f7;
+}
+
+#sellerCat1>div {
+    line-height: 50px;
+    padding-left: 20px;
+}
+
+#forSport, #forhealth {
+    background-color: lightcyan;
+    padding: 20px;
+    line-height: 30px;
+}
+
+#sNutri:hover {
+    background-color: white;
+}
+
+#hNutri:hover {
+    background-color: white;
+}
+
+#gend-DroDwn {
+    display: none;
+}
+
+#gend-DroDwn {
+    width: 265px;
+    height: 176px;
+    position: absolute;
+    background-color: #fff;
+}
+
+#gen_content {
+    width: 219px;
+    height: 145px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.gender_text {
+    color: #1d1d1d;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#cat_menWomen {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-gap: 20px;
+}
+
+#cat_menWomen>div {
+    width: 100px;
+    height: 107px;
+    border: 0.5px solid gray;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+}
+
+#div_cat_Men:hover {
+    border: 1px solid blue;
+    color: blueviolet;
+}
+
+#div_cat_Women:hover {
+    border: 1px solid blue;
+    color: blueviolet;
+}
+
+#hk {
+    background-color: #d8faf9 !important;
+}
+
+#hk:hover {
+    background-color: rgb(60, 187, 238) !important;
+}
+#page_container{
+    width: 1170px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 21% 79%;
+    grid-gap:30px;
+    margin-top: 30px;
+}
+a{
+    cursor: pointer;
+    }
+    button{
+        cursor: pointer;
+    }
+
+#sort_funcs{
+    display: inline-block;
+    vertical-align: top;
+    height: 300px;
+    border: 2px solid #f6f6f7;
+    overflow-y: scroll;
+}
+#products_Cont{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap:2%;
+}
+#products_Cont>div{
+    width: 270px;
+}
+#products_Cont>div:hover{
+    box-shadow: 0 3px 26px rgb(0 0 0 / 16%);
+    transition: 0.2s;
+}
+.discount{
+ background: #e35a5a;
+ border-radius: 2px;
+ font-size: 12px;
+ font-weight: 500;
+ line-height: 23px;
+ text-align: center;
+ color: #fff;
+ top: 0;
+ width: 52px;
+}
+.img_Cont{
+   width: fit-content;
+   margin: auto;
+}
+.rating_text{
+   margin-left: 5px;
+   margin-top: 5px;
+   margin-bottom: 10px;
+}
+.quick_btn{
+   margin-left: auto;
+   margin-right: 5px;
+   color:#008497;
+   border:0.5px solid #008497;
+   background-color: transparent;
+   padding: 8px;
+   border-radius: 4px;
+   cursor: pointer;
+}
+.price_Pro{
+font-size: 20px;
+font-weight: 700;
+line-height: 1.19;
+letter-spacing: normal;
+text-align: left;
+color: #212121;
+margin-right: 5px;
+}
+.block{
+   display: inline-block;
+   color: #212121;
+}
+#sorts{
+  display: inline-block;
+   margin-bottom: 50px;
+}
+#header-Navbar{
+    position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+#cont_Page{
+    width: 1170px;
+    font-size: 14px;
+    margin: auto;
+    color: gray;
+}
+#cont_Page p{
+   margin:15px 0 15px 0;
+}
+#top_Page{
+    display: grid;
+    grid-template-columns: 21% 79%;
+    grid-gap: 35px;
+    width: 1170px;
+    margin: auto;
+}
+#image_Head{
+    width: 895px;
+    height: 186px;
+}
+#image_Head img{
+    width: 100%;
+    border-radius: 5px;
+}
+#top_Page h1{
+    font-weight:500;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 120px;
+    color: #1a1a1a;
+}
+#sort_By_Price>div
+{
+   line-height: 40px;
+   margin: auto;
+   width: 80%;
+}
+#gola{
+    background-color: #fff;
+    border: 1px solid #929495;
+    border-radius: 50%;
+    display: inline-block;
+    content: " ";
+    width: 12px;
+    height: 12px;
+}
+#main{
+    padding-top: 100px;
+}
+</style>
+<body>
+    <div id='header-Navbar'>
+        <section>
+            <div id='navCont'>
+                <div id='logo'><svg version="1.0" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink"
+                    a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 179.3 43.7"
+                    enable-background="new 0 0 179.3 43.7" space="preserve">
+                    <polygon fill="#00BFBF" points="10.7,13.3 10.7,20.4 3,20.4 3,13.3 0,13.3 0,30.4 3,30.4 3,22.8 10.7,22.8 10.7,30.4 13.6,30.4
+                    13.6,13.3 "></polygon>
+                    <polygon fill="#00BFBF" points="30.7,22.8 22.5,22.8 22.5,28 30.7,28 30.7,30.4 19.5,30.4 19.5,13.3 30.7,13.3 30.7,15.7 22.5,15.7
+                    22.5,20.4 30.7,20.4 "></polygon>
+                    <path fill="#00BFBF"
+                        d="M45.6,26.4H39l-1.4,4h-3.1L41,13.3h2.7l6.5,17.2H47L45.6,26.4z M39.8,24h5l-2.5-7.1L39.8,24z">
+                    </path>
+                    <polygon fill="#00BFBF" points="56.2,28 64,28 64,30.4 53.2,30.4 53.2,13.3 56.2,13.3 "></polygon>
+                    <polygon fill="#00BFBF"
+                        points="79.2,15.7 73.8,15.7 73.8,30.4 70.9,30.4 70.9,15.7 65.6,15.7 65.6,13.3 79.2,13.3 ">
+                    </polygon>
+                    <path fill="#00BFBF" d="M98.1,20.4v-7.1h3v17.2h-3v-7.6h-7.7v7.6h-3V13.3h3v7.1H98.1z M110.6,19.3l5-6h3.6l-6.4,7.6l6.7,9.6H116
+                    l-5.2-7.4l-1.9,2.1v5.3h-3V13.3h3v8L110.6,19.3z M82.6,42.7h41.7V1H82.6V42.7z"></path>
+                    <path fill="#00BFBF"
+                        d="M138.3,26.4h-6.6l-1.4,4h-3.1l6.5-17.2h2.7l6.5,17.2h-3.1L138.3,26.4z M132.5,24h5l-2.5-7.1L132.5,24z">
+                    </path>
+                    <g>
+                        <path fill="#00BFBF" d="M153.1,23.8h-3.3v6.6h-3V13.3h6c1,0,1.9,0.1,2.6,0.3c0.8,0.2,1.4,0.6,2,1c0.5,0.4,0.9,1,1.2,1.6
+                    c0.3,0.6,0.4,1.4,0.4,2.2c0,1.1-0.3,2.1-0.8,2.9c-0.6,0.8-1.3,1.4-2.3,1.8l3.9,7.2v0.2h-3.2L153.1,23.8z M149.8,21.4h3.1
+                    c0.5,0,1-0.1,1.4-0.2c0.4-0.1,0.7-0.3,1-0.6c0.3-0.3,0.5-0.5,0.6-0.9c0.1-0.3,0.2-0.7,0.2-1.1c0-0.4-0.1-0.8-0.2-1.2
+                    c-0.1-0.4-0.3-0.7-0.6-0.9c-0.3-0.3-0.6-0.5-1-0.6c-0.4-0.1-0.9-0.2-1.5-0.2h-3.1V21.4z"></path>
+                        <polygon fill="#00BFBF"
+                            points="176,15.7 170.7,15.7 170.7,30.4 167.7,30.4 167.7,15.7 162.4,15.7 162.4,13.3 176,13.3 ">
+                        </polygon>
+                    </g>
+                </svg></div>
+                <div id="searchCont">
+                    <img class="glass" src="https://static1.hkrtcdn.com/hknext/static/media/common/header/search-icon-grey-2.svg">
+                    <input id='search' type="text" placeholder="Search for products, brands or Health Goals">
+                </div>
+                <div id='headCart'>
+                  <div> Loyal Rewards <span class="ima">&nbsp;|</span></div>
+                  <div>Customer Support
+                    <span class="ima"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/arrow-down.svg" alt="">&nbsp;|</span>
+                 </div>
+                  <div id='accounts'>My Account & Orders
+                  <span class="ima"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/arrow-down.svg" alt="">&nbsp;|</span>
+                   <div id='dropTable'>
+                       <div id='sI'>LogIn</div>
+                       <div id='lO'>New user? / Sign up</div>
+                       <div id='insideDrop'>
+                        <div id='f1'>
+                            <div>My Account</div>
+                            <div><span><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-orders.svg" alt="" srcset=""></span>&nbsp; Orders</div>
+                            <div><span><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-wishlist.svg" alt="" srcset=""></span>&nbsp; Witch List</div>
+                            <div><span><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/loyalty-rewards.svg" alt="" srcset=""></span>&nbsp; Loyal Rewards</div>
+                        </div>
+                        <div id='f2'>
+                            <div>Health Profile</div>
+                            <div>&nbsp; Diet Plan</div>
+                            <div>&nbsp; My Consultants</div>
+                            <div>&nbsp; Recommended Products</div>
+                        </div>
+                       </div>
+                   </div>
+                </div>
+                  <div id='cart'><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/cart.svg" alt="cart"></div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section>
+             <div id='belowNav'>
+                <div id='catag'>
+                <div id='catagfirst'>Category</div>
+                <div>Brand</div>
+                <div id='genderSec'>Gender
+                    <div id='gend-DroDwn'>
+                         <div id='gen_content'>
+                             <div class="gender_text">Shop By Gender</div>
+                             <div id='cat_menWomen'>
+                                 <div id='div_cat_Men'><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/man-2.svg" alt="" srcset="">
+                                     <div>MEN</div>
+                                </div>
+                                 <div id='div_cat_Women'><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/woman-2.svg" alt="" srcset="">
+                                   <div>WOMEN</div>
+                                </div>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+                <div>Goal</div>
+                <div id='bestSells'>Bestsellers
+                <div id='catogBestSeller'>
+                    <div id='sellerCat1'>
+                        <div id='sNutri'>Sport Nutrition</div>
+                        <div id='hNutri'>Health Nutrition</div>
+                    </div>
+                    <div id=sellerCat2>
+                        <div id='forSport'>
+                            <div>Protein Powder</div>
+                            <div>Masss Gainer</div>
+                            <div>Whey Protein</div>
+                            <div>Health Booster</div>
+                        </div>
+                        <div id='forhealth'>
+                            <div>Protein A</div>
+                            <div>Mas B</div>
+                            <div>Protein C</div>
+                            <div>Health Booster G</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div>Deals</div>
+                <div>Gift Card</div>
+                <div id='cataglast'>Blog,Video & More</div>
+                </div>
+                <div id='store'>
+                    <div id='hk'><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/hk-consult.svg" alt="" srcset="">
+                        <span id='cons'>&nbsp;HK Consult</span>
+                        <div id='myDIV'>
+                            <h1>Consult Services</h1>
+                            <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg" alt=""></span>&nbsp;&nbsp;Health Profile</p>
+                            <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/book-consultation-icon.svg" alt=""></span>&nbsp;&nbsp;Book a Consultation</p>
+                            <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg" alt=""></span>&nbsp;&nbsp;Recommend a Product</p>
+                            <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/what-we-offer-icon.svg" alt=""></span>&nbsp;&nbsp;Service Programs</p>
+                            <p><span class="ic"><img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/consult-health-profile-icon.svg" alt=""></span>&nbsp;&nbsp;Workout at Home</p>
+                         </div>
+                    </div>
+                    <div id='st_store'><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/location-pin.svg" alt="" srcset="">&nbsp;Find a Store
+                    </div>
+                </div>
+             </div>
+        </section>
+        <hr>
+    </div>
+  <div>
+      <div id= 'cont_Page'> 
+          <p>Home / Sports / NutritionProteins / WheyProteins</p>
+        <div id='top_Page'>
+            <div><h1>Browse By</h1></div>
+            <div id='image_Head'>
+                <img src="	https://hemantjayas.github.io/HealthKart/image/bnr_produt_Page.jpg" alt="" srcset="">
+            </div>
+          </div>
+      </div>
+  </div>
+    <div id='page_container'>
+        <div id='sort_funcs'>
+            <div id='sort_By_Price'>
+                <div><span id="gola"></span>&nbsp; TrueBasics Advanced Calcium 30 tablet(s) @ Rs  379</div>
+                <div><span id="gola"></span> HealthKart Multivitamin 60 tablet(s) @ Rs. 325</div>
+                <div><span id="gola"></span> Additional Rs.35 off on TB Lung Detox 30 Tablets</div>
+                <div><span id="gola"></span> Extra 16% off on Healthkart Fish oil 60 capsules</div>
+            </div>
+        </div>
+        <div id ='products_Container'>
+            <div class='block'>Sort By</div>
+            <select name="" id="sorts">
+                <option value="">Popularity</option>
+                <option value="htoL">Price-High To Low</option>
+                <option value="ltoH">Price-Low To High</option>
+                <option value="r_ltoH">Rating-Low To High</option>
+                <option value="r_htoL">Rating-High To Low</option>
+            </select>
+            <div id="products_Cont"> 
+                <!--all the product are here  -->
+                <!-- <% trendingNow_protiens.forEach((product)=> {%>
+                    <div>
+                         <div class="discount"> <%= product.price_off%> </div>
+                              <div class="img_Cont">
+                                  <img style="width: 190px; height: 190px;" src= <%=product.imgProduct %>  />
+                              </div>
+                         <div style="text-align: center; font-size: 14px; color: grey;"> <%=  product.name %> </div>
+                         <div class="rating_text">Rating: <%= product.rating %>  </div>
+                         <div style="display: flex; margin-left: 5px; align-items: center;">
+                                <div class="price_Pro"> <%= product.premium_price %> </div>
+                                      <button class="quick_btn">
+                                           <img src="https://static1.hkrtcdn.com/hknext/static/media/pdp/thunder-buy.svg">
+                                           <span onclick="addtoCart('<%=JSON.stringify(product)%>')" id='<%=product._id%>'>Quick Buy</span>
+                                      </button>
+                           </div>
+                      </div>
+                  
+                  
+                  <% }) %> -->
+
+                <!---  all the product are here -->
+            </div> 
+        </div>
+    </div>
+    <div id="main">
+    </div>
+</body>
+</html>
+<script>
+      const xhr = new XMLHttpRequest();
+xhr.open('GET', 'http://localhost:2345/flashsale/getTrend');
+ let products;
+xhr.onload = async () => {
+    var arr = await xhr.response;
+    products = JSON.parse(arr)
+    console.log(products)
+}
+
+
+
+ // / / ////////////////////////////////
+     let products_Cont = document.getElementById('products_Cont');
+     let sort_By_Price = document.getElementById('sorts');
+
+   
+
+     sort_By_Price.onchange =()=>
+     {
+         products_Cont.innerHTML = '';
+        appendProducts(products_Cont ,sort_By_Price.value)
+     }
+
+  
+function appendProducts(products_cont,valueSort){
+    
+    let proMEN =  sortBy(products,valueSort);
+    console.log(proMEN);
+    proMEN.forEach(pro=>{
+         
+             let container = document.createElement('div');
+             let discount = document.createElement('div');
+             discount.textContent= Math.floor((Math.random() * 70) + 5) +"% off";
+             discount.setAttribute('class',"discount")
+             
+             let name = document.createElement('div');
+              name.textContent = pro.name;
+              name.style.textAlign = 'center'
+              name.style.fontSize = '14px'
+              name.style.color = 'grey'
+ 
+             let img_Cont = document.createElement('div');
+             let image = document.createElement('img')
+             image.src = pro.imgProduct;
+             image.style.width = '190px'
+             image.style.height='190px'
+             img_Cont.setAttribute('class',"img_Cont")
+             img_Cont.appendChild(image)
+  
+             let rating =  document.createElement('div');
+             rating.textContent = "Rating: "+ pro.rating;
+             rating.setAttribute('class','rating_text')
+             
+             let price_quickBuy = document.createElement('div');
+             price_quickBuy.style.display = 'flex'
+             price_quickBuy.style.marginLeft = '5px'
+             price_quickBuy.style.alignItems = 'center'
+             let price = document.createElement('div');
+             price.textContent = "₹"+ pro.price;
+             price.setAttribute('class',"price_Pro")
+             
+             let quickBuy = document.createElement('button');
+             quickBuy.setAttribute('class','quick_btn');
+             let image_buy = document.createElement('img')
+             image_buy.src ='https://static1.hkrtcdn.com/hknext/static/media/pdp/thunder-buy.svg'
+             let txt = document.createElement('span')
+             txt.textContent = 'Quick Buy'
+             quickBuy.onclick = ()=>
+             {
+                 addtoCart(pro)
+                 window.location.href ='cart.html'
+             }
+             quickBuy.append(image_buy,txt)
+             
+             price_quickBuy.append(price,quickBuy)
+             container.append(discount,img_Cont,name,rating,price_quickBuy)
+             products_cont.appendChild(container)
+       })
+ }
+ 
+ function sortBy(products,value)
+ {
+     console.log(value);
+     if(value == '')
+     {
+         return products;
+     }
+   else if(value == 'ltoH'|| value=='htoL')
+   {
+     for(let i = 0; i<products.length; i++)
+     {
+       for(let j = 0; j<products.length-i-1; j++)
+       {
+           if(products[j].price > products[j+1].price)
+           {
+               let temp = products[j]
+               products[j] = products[j+1]
+               products[j+1] = temp;
+           }
+       }
+     }
+     if(value == 'htoL')
+     {
+         return products.reverse()
+     }else if(value == 'ltoH')
+     {
+         return products;
+     }
+   }else if(value == 'r_ltoH'||value == 'r_htoL')
+   {
+     for(let i = 0; i<products.length; i++)
+     {
+       for(let j = 0; j<products.length-i-1; j++)
+       {
+           if(products[j].rating > products[j+1].rating)
+           {
+               let temp = products[j]
+               products[j] = products[j+1]
+               products[j+1] = temp;
+           }
+       }
+     }
+     if(value == 'r_htoL')
+     {
+         return products.reverse()
+     }else if(value == 'r_ltoH')
+     {
+         return products;
+     }
+   }
+ }
+
+
+
+
+
+///////////////////////////////
+
+     let nav_div = document.getElementById("header-Navbar");
+
+     function onMouseIn(hCons, myDIV){
+    hCons.onmouseover = ()=> 
+    {
+        addDropDwn(myDIV)
+    }
+}
+function onMouserOut(hCons, myDIV){
+   hCons.onmouseleave = ()=> 
+    {
+        removeDropDwn(myDIV)
+    }
+}
+function addDropDwn(x) {
+      
+    if (x.style.display === "none") {
+      x.style.display = "grid";
+      x.style.position ='absolute'
+      x.style.zIndex = '1'
+    }
+  }
+  function removeDropDwn(x){
+      x.style.display = "none";
+     }
+
+ function addDropDwn1(mO,x ,array) {
+        mO.onmouseover =()=> {
+            array.forEach((ele)=>{
+                 ele.style.display = "none"
+          });
+        if (x.style.display === "none") {
+          x.style.display = "grid";
+          x.style.position ='absolute';
+          x.style.backgroundColor = 'white'
+          x.style.zIndex = '1'
+        }
+       }
+      }
+      function getElement(id)
+      {
+          return document.getElementById(id);
+      }
+    
+        function makeArr(array){
+            let arr = []
+            for(let i=0; i< array.length; i++)
+            {
+                arr.push(document.getElementById(array[i]))
+            }
+            return arr;
+        }
+        function makeNavbar(){
+            let hCons = getElement('hk');
+            let myDIV = getElement('myDIV');
+            onMouseIn(hCons,myDIV)
+            onMouserOut(hCons,myDIV)
+        
+          let bestSeller = getElement('bestSells');
+          let catBestSell = getElement('catogBestSeller')
+           onMouseIn(bestSeller,catBestSell)
+           onMouserOut(bestSeller, catBestSell)
+          let sNutri = getElement('sNutri')
+          let hNutri = getElement('hNutri')
+          let ar = makeArr(['forSport','forhealth'])
+          addDropDwn1(sNutri,ar[0],ar)
+          addDropDwn1(hNutri,ar[1],ar)
+          
+          let accounts = getElement('accounts')
+          let dT = getElement('dropTable')
+          onMouseIn(accounts,dT)
+          onMouserOut(accounts,dT)
+
+          let genderSec = document.getElementById('genderSec');
+  genderSec.onmouseover = ()=>{
+       let gendDroDwn = document.getElementById('gend-DroDwn')
+       gendDroDwn.style.display = 'grid'
+       gendDroDwn.style.zIndex = '1'
+  }
+  genderSec.onmouseleave = ()=>{
+       let gendDroDwn = document.getElementById('gend-DroDwn')
+       gendDroDwn.style.display = 'none'
+  }
+  let Crt = document.getElementById('cart');
+  Crt.onclick = ()=>{
+    window.location.href = 'cart'
+  }
+  
+  div_cat_Men.onclick = ()=>{
+
+    window.location.href = 'men'
+  }
+  div_cat_Women.onclick = ()=>{
+
+    window.location.href = 'women'
+  }
+
+  let healthLogo = document.getElementById('logo');
+  healthLogo.onclick= ()=>
+{
+  window.location.href = 'http://localhost:2345/flashsale'
+}
+
+const sign = document.getElementById('sI')
+  sign.onclick = ()=>{
+    window.location.href = 'http://localhost:2345/login'
+  }
+  const signUp = document.getElementById('lO')
+  signUp.onclick = ()=>{
+    window.location.href = 'http://localhost:2345/signup'
+  }
+  const catigg = document.getElementById('catagfirst');
+  catigg.onclick= ()=>{
+    window.location.href = 'http://localhost:2345/flashsale/category'
+  }
+  }
+  makeNavbar();
+  let cartLogo = document.getElementById('cart');
+cartLogo.onclick = ()=>{
+    window.location.href = "http://localhost:2345/flashsale/cart"
+}
+function addtoCart(product) {
+    product = JSON.parse(product);
+    console.log(product)
+    if (localStorage.getItem("healthkart_cart") === null) {
+        localStorage.setItem("healthkart_cart", JSON.stringify([]));
+    }
+    let array = JSON.parse(localStorage.getItem("healthkart_cart"));
+    let present  = false;
+
+      array.forEach((pro)=>{
+        if(pro.name == product.name)
+        {  
+            pro["quantity"]++;
+            present = true;
+        }
+     })
+   if(present)
+   {
+    localStorage.setItem("healthkart_cart", JSON.stringify(array));
+   }else{
+      product["quantity"] = 1;
+      array.push(product);
+      localStorage.setItem("healthkart_cart", JSON.stringify(array));
+   }
+   window.location.href = "http://localhost:2345/flashsale/cart"
+}
+
+
+xhr.send()
+</script>
