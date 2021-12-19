@@ -15,6 +15,13 @@
 + [Dhruv Kumar Agrawal](https://github.com/Dhruvkagrawal)
 
 ----
+## Features
++ Validation
++ Autentication
++ File Upload
++ Dynamic Address page and Login page
+
+----
 ## Tech Stack
 
 The tech Stack we used for creating this webiste are:-
