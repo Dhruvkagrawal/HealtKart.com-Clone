@@ -20,6 +20,7 @@
 + Autentication
 + File Upload
 + Dynamic Address page and Login page
++ Google authentication
 
 ----
 ## Tech Stack
