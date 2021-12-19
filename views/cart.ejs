@@ -358,7 +358,7 @@ cart_data = filter(cart_data);
 console.log(cart_data);
 function Cart_items() {
     proceedToPay.onclick = ()=>{
-        window.location.href = 'address'
+        window.location.href = 'http://localhost:2345/address'
     }
         cart_data.forEach(function (product) {
                 let div = document.createElement("div");
