@@ -1,8 +1,9 @@
 # HealthKart.com_Clone_Project
 ---
 
- This project is a clone of HealthKart.com which is an online portal for Dietary supplements and health devices in the Health care industry in India. Prashant Tandon and Sameer Maheshwari founded the company in 2011.
+ This project is a clone of (HealthKart.com) which is India’s largest online health & fitness store for men and women. Shop online from the latest collections of health, fitness and similar products featuring the best brands.. It is our unit-4 construct week project as a part of our curriculum in Masai School.
  This company lead to the expansion of Fitness, Weight gain, Weight loss etc categories further in the e-health space. 
+ 
 
 ## Contributors
 ---
